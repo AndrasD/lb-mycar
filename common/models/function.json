@@ -1,0 +1,20 @@
+{
+  "name": "Function",
+  "base": "Role",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {},
+  "validations": [],
+  "relations": {
+    "functionCustomer": {
+      "type": "hasMany",
+      "model": "Customer",
+      "foreignKey": "roleId",
+      "through": "CustomerFunction"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

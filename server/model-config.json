@@ -36,7 +36,15 @@
     "dataSource": "db",
     "public": false
   },
-  "customer": {
+  "Customer": {
+    "dataSource": "mysqlDs",
+    "public": true
+  },
+  "Function": {
+    "dataSource": "mysqlDs",
+    "public": true
+  },
+  "CustomerFunction": {
     "dataSource": "mysqlDs",
     "public": true
   }

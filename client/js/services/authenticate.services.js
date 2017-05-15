@@ -6,17 +6,20 @@
 angular
   .module('app')
   .factory('AuthService', ['Customer', '$q', '$rootScope', '$state', 'toaster', function(User, $q, $rootScope, $state, toaster) {
+
     function login(email, password) {
       return User
         .login({email: email, password: password})
         .$promise
         .then(function(response) {
           toaster.pop("success", "", "Logged in successfully!", 10000, 'trustedHtml');
+          role(response.user.id).then(function(res){})
           $rootScope.currentUser = {
             id: response.user.id,
             tokenId: response.id,
             email: email,
-            username: response.user.username
+            username: response.user.username,
+            role: res.name
           }
         })
         .catch(function(error) {
@@ -61,4 +64,5 @@ angular
       register: register,
       refresh: refresh
     };
+
   }]);

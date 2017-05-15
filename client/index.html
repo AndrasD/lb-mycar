@@ -51,7 +51,7 @@
                 <li ng-show="currentUser">
                     <a ui-sref="dashboard" ui-sref-active="active"><i class="fa fa-th"></i>&nbsp; Dashboard</a>
                 </li>
-                <li ng-show="currentUser && currentUser.admin">
+                <li ng-show="currentUser && currentUser.role == 'admin'">
                     <a ui-sref="customers" ui-sref-active="active"><i class="fa fa-users"></i>&nbsp; Customers</a>
                 </li>
                 <li ng-show="currentUser">
