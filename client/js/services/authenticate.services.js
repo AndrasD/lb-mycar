@@ -5,40 +5,40 @@
 
 angular
   .module('app')
-  .factory('AuthService', ['Customer', '$q', '$rootScope', '$state', 'toaster', function(User, $q, $rootScope, $state, toaster) {
+  .factory('AuthService', ['Customer', '$q', '$rootScope', '$state', 'toaster', function(Customer, $q, $rootScope, $state, toaster) {
 
     function login(email, password) {
-      return User
+      return Customer
         .login({email: email, password: password})
         .$promise
         .then(function(response) {
-          toaster.pop("success", "", "Logged in successfully!", 10000, 'trustedHtml');
-          role(response.user.id).then(function(res){})
+          toaster.pop("success", "", "Logged in successfully!", 5000, 'trustedHtml');
+          var szerep = role(response.user.id);
           $rootScope.currentUser = {
             id: response.user.id,
             tokenId: response.id,
             email: email,
             username: response.user.username,
-            role: res.name
+            role: szerep.name
           }
         })
         .catch(function(error) {
-          toaster.pop("error", "", "Login failed. " || error.status, 10000, 'trustedHtml');
+          toaster.pop("error", "", "Login failed.", 10000, 'trustedHtml');
         });
     }
 
     function logout() {
-      return User
+      return Customer
        .logout()
        .$promise
        .then(function() {
-         toaster.pop("success", "", "Logged out successfully!", 10000, 'trustedHtml');
+         toaster.pop("success", "", "Logged out successfully!", 5000, 'trustedHtml');
          $rootScope.currentUser = null;
        });
     }
 
     function register(email, password) {
-      return User
+      return Customer
         .create({
          email: email,
          password: password
@@ -47,7 +47,7 @@ angular
     }
 
     function refresh(accessTokenId) {
-      return User
+      return Customer
         .getCurrent(function(userResource) {
           $rootScope.currentUser = {
             id: userResource.id,
@@ -56,6 +56,17 @@ angular
             username: userResource.username
           };
         });
+    }
+
+    function role(userId) {
+      return Customer
+       .customerFunction({
+        id: userId
+       })
+       .$promise
+       .then(function(resp) {
+        resp.name;
+       });
     }
 
     return {

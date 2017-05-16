@@ -58,7 +58,7 @@ module.exports = function(app) {
       if (err) return cb(err);
 
       CustomerFunction.create({
-        principalType: CustomerFunction.ROLE,
+        principalType: CustomerFunction.USER,
         principalId: 1,
         roleId: 1     
       }, cb);
