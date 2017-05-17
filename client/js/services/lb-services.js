@@ -14,6 +14,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
   'use strict';
 
   var urlBase = "/api";
+  //var urlBase = "https://sxs-user.herokuapp.com/api";
   var authHeader = 'authorization';
 
   function getHost(url) {

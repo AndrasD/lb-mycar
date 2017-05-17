@@ -1,6 +1,6 @@
 angular
   .module('app')
-  .controller('AuthLoginController', ['$scope', 'AuthService', '$state', function($scope, AuthService, $state) {
+  .controller('AuthLoginController', ['$scope', '$rootScope', 'AuthService', '$state', function($scope, $rootScope, AuthService, $state) {
     $scope.user = {
       email: '',
       password: ''
@@ -25,13 +25,17 @@ angular
           }
           // or go to the default state after login
           $scope.user = null;
-          $state.go('dashboard');
+          if ($rootScope.currentUser != null) {
+            $state.go('dashboard');
+          } else {
+            $state.go('login');          
+          } 
         });
     };
   }])
 
   .controller('AuthLogoutController', ['$scope', '$rootScope', 'AuthService', '$state', function($scope, $rootScope, AuthService, $state) {
-    if ($rootScope.currentUser != null) {
+    if ($rootScope.currentUser) {
       AuthService.logout()
         .then(function() {
           $state.go('login');

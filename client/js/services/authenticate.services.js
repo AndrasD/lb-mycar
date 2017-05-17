@@ -8,13 +8,13 @@ angular
         .$promise
         .then(function(response) {
           toaster.pop("success", "", "Logged in successfully!", 5000, 'trustedHtml');
-          var szerep = role(response.user.id);
+//          var szerep = role(response.user.id);
           $rootScope.currentUser = {
             id: response.user.id,
             tokenId: response.id,
             email: email,
             username: response.user.username,
-            role: szerep.name
+//            role: szerep.name
           }
         })
         .catch(function(error) {
