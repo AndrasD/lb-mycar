@@ -7,9 +7,10 @@ angular
   .module('app', ['ui.router', 'lbServices', 'ngAnimate', 'toaster', 'ngMap'])
   .config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
     $stateProvider
-      .state('forbidden', {
-        url: '/forbidden',
-        templateUrl: 'views/forbidden.html',
+      .state('dashboard', {
+        url: '/dashboard',
+        templateUrl: 'views/dashboard.view.html',
+        controller: 'dashboardController'
       })
       .state('login', {
         url: '/login',
@@ -22,6 +23,7 @@ angular
       });
     $urlRouterProvider.otherwise('login');
   }])
+  
   .run(['$rootScope', '$state', 'LoopBackAuth', 'AuthService', function($rootScope, $state, LoopBackAuth, AuthService) {
     $rootScope.$on('$stateChangeStart', function(event, toState, toParams) {
       // redirect to login page if not logged in
@@ -36,7 +38,7 @@ angular
           params: toParams
         };
 
-        $state.go('forbidden');
+        $state.go('dashboard');
       }
     });
 

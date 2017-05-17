@@ -1,5 +1,5 @@
 {
-  "name": "Function",
+  "name": "Right",
   "base": "Role",
   "idInjection": true,
   "options": {
@@ -8,11 +8,11 @@
   "properties": {},
   "validations": [],
   "relations": {
-    "functionCustomer": {
+    "rightCustomer": {
       "type": "hasMany",
       "model": "Customer",
       "foreignKey": "roleId",
-      "through": "CustomerFunction"
+      "through": "CustomerRight"
     }
   },
   "acls": [],

@@ -1,8 +1,3 @@
-// Copyright IBM Corp. 2015. All Rights Reserved.
-// Node module: loopback-getting-started-intermediate
-// This file is licensed under the MIT License.
-// License text available at https://opensource.org/licenses/MIT
-
 angular
   .module('app')
   .controller('AuthLoginController', ['$scope', 'AuthService', '$state', function($scope, AuthService, $state) {
@@ -30,14 +25,19 @@ angular
           }
           // or go to the default state after login
           $scope.user = null;
-          //$state.go('add-review');
+          $state.go('dashboard');
         });
     };
   }])
 
-  .controller('AuthLogoutController', ['$scope', 'AuthService', '$state', function($scope, AuthService, $state) {
-    AuthService.logout()
-      .then(function() {
-        $state.go('login');
-      });
+  .controller('AuthLogoutController', ['$scope', '$rootScope', 'AuthService', '$state', function($scope, $rootScope, AuthService, $state) {
+    if ($rootScope.currentUser != null) {
+      AuthService.logout()
+        .then(function() {
+          $state.go('login');
+        });
+    } else {
+      $state.go('login');
+    }    
+
   }]);

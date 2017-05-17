@@ -1,8 +1,3 @@
-// Copyright IBM Corp. 2015. All Rights Reserved.
-// Node module: loopback-getting-started-intermediate
-// This file is licensed under the MIT License.
-// License text available at https://opensource.org/licenses/MIT
-
 angular
   .module('app')
   .factory('AuthService', ['Customer', '$q', '$rootScope', '$state', 'toaster', function(Customer, $q, $rootScope, $state, toaster) {
@@ -60,7 +55,7 @@ angular
 
     function role(userId) {
       return Customer
-       .customerFunction({
+       .customerRight({
         id: userId
        })
        .$promise
@@ -73,7 +68,8 @@ angular
       login: login,
       logout: logout,
       register: register,
-      refresh: refresh
+      refresh: refresh,
+      role: role
     };
 
   }]);

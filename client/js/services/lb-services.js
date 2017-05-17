@@ -1272,95 +1272,95 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               method: "POST",
             },
 
-            // INTERNAL. Use Function.functionCustomer.findById() instead.
-            "::findById::Function::functionCustomer": {
+            // INTERNAL. Use Right.rightCustomer.findById() instead.
+            "::findById::Right::rightCustomer": {
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/Functions/:id/functionCustomer/:fk",
+              url: urlBase + "/Rights/:id/rightCustomer/:fk",
               method: "GET",
             },
 
-            // INTERNAL. Use Function.functionCustomer.destroyById() instead.
-            "::destroyById::Function::functionCustomer": {
+            // INTERNAL. Use Right.rightCustomer.destroyById() instead.
+            "::destroyById::Right::rightCustomer": {
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/Functions/:id/functionCustomer/:fk",
+              url: urlBase + "/Rights/:id/rightCustomer/:fk",
               method: "DELETE",
             },
 
-            // INTERNAL. Use Function.functionCustomer.updateById() instead.
-            "::updateById::Function::functionCustomer": {
+            // INTERNAL. Use Right.rightCustomer.updateById() instead.
+            "::updateById::Right::rightCustomer": {
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/Functions/:id/functionCustomer/:fk",
+              url: urlBase + "/Rights/:id/rightCustomer/:fk",
               method: "PUT",
             },
 
-            // INTERNAL. Use Function.functionCustomer.link() instead.
-            "::link::Function::functionCustomer": {
+            // INTERNAL. Use Right.rightCustomer.link() instead.
+            "::link::Right::rightCustomer": {
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/Functions/:id/functionCustomer/rel/:fk",
+              url: urlBase + "/Rights/:id/rightCustomer/rel/:fk",
               method: "PUT",
             },
 
-            // INTERNAL. Use Function.functionCustomer.unlink() instead.
-            "::unlink::Function::functionCustomer": {
+            // INTERNAL. Use Right.rightCustomer.unlink() instead.
+            "::unlink::Right::rightCustomer": {
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/Functions/:id/functionCustomer/rel/:fk",
+              url: urlBase + "/Rights/:id/rightCustomer/rel/:fk",
               method: "DELETE",
             },
 
-            // INTERNAL. Use Function.functionCustomer.exists() instead.
-            "::exists::Function::functionCustomer": {
+            // INTERNAL. Use Right.rightCustomer.exists() instead.
+            "::exists::Right::rightCustomer": {
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/Functions/:id/functionCustomer/rel/:fk",
+              url: urlBase + "/Rights/:id/rightCustomer/rel/:fk",
               method: "HEAD",
             },
 
-            // INTERNAL. Use Function.functionCustomer() instead.
-            "::get::Function::functionCustomer": {
+            // INTERNAL. Use Right.rightCustomer() instead.
+            "::get::Right::rightCustomer": {
               isArray: true,
-              url: urlBase + "/Functions/:id/functionCustomer",
+              url: urlBase + "/Rights/:id/rightCustomer",
               method: "GET",
             },
 
-            // INTERNAL. Use Function.functionCustomer.create() instead.
-            "::create::Function::functionCustomer": {
-              url: urlBase + "/Functions/:id/functionCustomer",
+            // INTERNAL. Use Right.rightCustomer.create() instead.
+            "::create::Right::rightCustomer": {
+              url: urlBase + "/Rights/:id/rightCustomer",
               method: "POST",
             },
 
-            // INTERNAL. Use Function.functionCustomer.createMany() instead.
-            "::createMany::Function::functionCustomer": {
+            // INTERNAL. Use Right.rightCustomer.createMany() instead.
+            "::createMany::Right::rightCustomer": {
               isArray: true,
-              url: urlBase + "/Functions/:id/functionCustomer",
+              url: urlBase + "/Rights/:id/rightCustomer",
               method: "POST",
             },
 
-            // INTERNAL. Use Function.functionCustomer.destroyAll() instead.
-            "::delete::Function::functionCustomer": {
-              url: urlBase + "/Functions/:id/functionCustomer",
+            // INTERNAL. Use Right.rightCustomer.destroyAll() instead.
+            "::delete::Right::rightCustomer": {
+              url: urlBase + "/Rights/:id/rightCustomer",
               method: "DELETE",
             },
 
-            // INTERNAL. Use Function.functionCustomer.count() instead.
-            "::count::Function::functionCustomer": {
-              url: urlBase + "/Functions/:id/functionCustomer/count",
+            // INTERNAL. Use Right.rightCustomer.count() instead.
+            "::count::Right::rightCustomer": {
+              url: urlBase + "/Rights/:id/rightCustomer/count",
               method: "GET",
             },
 
-            // INTERNAL. Use CustomerFunction.customer() instead.
-            "::get::CustomerFunction::customer": {
-              url: urlBase + "/CustomerFunctions/:id/customer",
+            // INTERNAL. Use CustomerRight.customer() instead.
+            "::get::CustomerRight::customer": {
+              url: urlBase + "/CustomerRights/:id/customer",
               method: "GET",
             },
 
@@ -1705,7 +1705,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
      * @description
      *
      * The object `Customer.customerFunction` groups methods
-     * manipulating `Function` instances related to `Customer`.
+     * manipulating `Right` instances related to `Customer`.
      *
      * Call {@link lbServices.Customer#customerFunction Customer.customerFunction()}
      * to query all related instances.
@@ -1743,11 +1743,11 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * <em>
              * (The remote method definition does not provide any description.
-             * This usually means the response is a `Function` object.)
+             * This usually means the response is a `Right` object.)
              * </em>
              */
         R.customerFunction = function() {
-          var TargetResource = $injector.get("Function");
+          var TargetResource = $injector.get("Right");
           var action = TargetResource["::get::Customer::customerFunction"];
           return action.apply(R, arguments);
         };
@@ -1786,7 +1786,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *  - `count` – `{number=}` -
              */
         R.customerFunction.count = function() {
-          var TargetResource = $injector.get("Function");
+          var TargetResource = $injector.get("Right");
           var action = TargetResource["::count::Customer::customerFunction"];
           return action.apply(R, arguments);
         };
@@ -1824,11 +1824,11 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * <em>
              * (The remote method definition does not provide any description.
-             * This usually means the response is a `Function` object.)
+             * This usually means the response is a `Right` object.)
              * </em>
              */
         R.customerFunction.create = function() {
-          var TargetResource = $injector.get("Function");
+          var TargetResource = $injector.get("Right");
           var action = TargetResource["::create::Customer::customerFunction"];
           return action.apply(R, arguments);
         };
@@ -1866,11 +1866,11 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * <em>
              * (The remote method definition does not provide any description.
-             * This usually means the response is a `Function` object.)
+             * This usually means the response is a `Right` object.)
              * </em>
              */
         R.customerFunction.createMany = function() {
-          var TargetResource = $injector.get("Function");
+          var TargetResource = $injector.get("Right");
           var action = TargetResource["::createMany::Customer::customerFunction"];
           return action.apply(R, arguments);
         };
@@ -1907,7 +1907,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * This method returns no data.
              */
         R.customerFunction.destroyAll = function() {
-          var TargetResource = $injector.get("Function");
+          var TargetResource = $injector.get("Right");
           var action = TargetResource["::delete::Customer::customerFunction"];
           return action.apply(R, arguments);
         };
@@ -1944,7 +1944,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * This method returns no data.
              */
         R.customerFunction.destroyById = function() {
-          var TargetResource = $injector.get("Function");
+          var TargetResource = $injector.get("Right");
           var action = TargetResource["::destroyById::Customer::customerFunction"];
           return action.apply(R, arguments);
         };
@@ -1980,11 +1980,11 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * <em>
              * (The remote method definition does not provide any description.
-             * This usually means the response is a `Function` object.)
+             * This usually means the response is a `Right` object.)
              * </em>
              */
         R.customerFunction.exists = function() {
-          var TargetResource = $injector.get("Function");
+          var TargetResource = $injector.get("Right");
           var action = TargetResource["::exists::Customer::customerFunction"];
           return action.apply(R, arguments);
         };
@@ -2020,11 +2020,11 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * <em>
              * (The remote method definition does not provide any description.
-             * This usually means the response is a `Function` object.)
+             * This usually means the response is a `Right` object.)
              * </em>
              */
         R.customerFunction.findById = function() {
-          var TargetResource = $injector.get("Function");
+          var TargetResource = $injector.get("Right");
           var action = TargetResource["::findById::Customer::customerFunction"];
           return action.apply(R, arguments);
         };
@@ -2064,11 +2064,11 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * <em>
              * (The remote method definition does not provide any description.
-             * This usually means the response is a `Function` object.)
+             * This usually means the response is a `Right` object.)
              * </em>
              */
         R.customerFunction.link = function() {
-          var TargetResource = $injector.get("Function");
+          var TargetResource = $injector.get("Right");
           var action = TargetResource["::link::Customer::customerFunction"];
           return action.apply(R, arguments);
         };
@@ -2105,7 +2105,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * This method returns no data.
              */
         R.customerFunction.unlink = function() {
-          var TargetResource = $injector.get("Function");
+          var TargetResource = $injector.get("Right");
           var action = TargetResource["::unlink::Customer::customerFunction"];
           return action.apply(R, arguments);
         };
@@ -2145,11 +2145,11 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * <em>
              * (The remote method definition does not provide any description.
-             * This usually means the response is a `Function` object.)
+             * This usually means the response is a `Right` object.)
              * </em>
              */
         R.customerFunction.updateById = function() {
-          var TargetResource = $injector.get("Function");
+          var TargetResource = $injector.get("Right");
           var action = TargetResource["::updateById::Customer::customerFunction"];
           return action.apply(R, arguments);
         };
@@ -2160,13 +2160,13 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
 
 /**
  * @ngdoc object
- * @name lbServices.Function
- * @header lbServices.Function
+ * @name lbServices.Right
+ * @header lbServices.Right
  * @object
  *
  * @description
  *
- * A $resource object for interacting with the `Function` model.
+ * A $resource object for interacting with the `Right` model.
  *
  * ## Example
  *
@@ -2176,19 +2176,19 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
  *
  */
   module.factory(
-    "Function",
+    "Right",
     [
       'LoopBackResource', 'LoopBackAuth', '$injector', '$q',
       function(LoopBackResource, LoopBackAuth, $injector, $q) {
         var R = LoopBackResource(
-        urlBase + "/Functions/:id",
+        urlBase + "/Rights/:id",
           { 'id': '@id' },
           {
 
             /**
              * @ngdoc method
-             * @name lbServices.Function#prototype$__findById__principals
-             * @methodOf lbServices.Function
+             * @name lbServices.Right#prototype$__findById__principals
+             * @methodOf lbServices.Right
              *
              * @description
              *
@@ -2196,7 +2196,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * @param {Object=} parameters Request parameters.
              *
-             *  - `id` – `{*}` - Function id
+             *  - `id` – `{*}` - Right id
              *
              *  - `options` – `{object=}` -
              *
@@ -2216,21 +2216,21 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * <em>
              * (The remote method definition does not provide any description.
-             * This usually means the response is a `Function` object.)
+             * This usually means the response is a `Right` object.)
              * </em>
              */
             "prototype$__findById__principals": {
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/Functions/:id/principals/:fk",
+              url: urlBase + "/Rights/:id/principals/:fk",
               method: "GET",
             },
 
             /**
              * @ngdoc method
-             * @name lbServices.Function#prototype$__destroyById__principals
-             * @methodOf lbServices.Function
+             * @name lbServices.Right#prototype$__destroyById__principals
+             * @methodOf lbServices.Right
              *
              * @description
              *
@@ -2238,7 +2238,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * @param {Object=} parameters Request parameters.
              *
-             *  - `id` – `{*}` - Function id
+             *  - `id` – `{*}` - Right id
              *
              *  - `options` – `{object=}` -
              *
@@ -2262,14 +2262,14 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/Functions/:id/principals/:fk",
+              url: urlBase + "/Rights/:id/principals/:fk",
               method: "DELETE",
             },
 
             /**
              * @ngdoc method
-             * @name lbServices.Function#prototype$__updateById__principals
-             * @methodOf lbServices.Function
+             * @name lbServices.Right#prototype$__updateById__principals
+             * @methodOf lbServices.Right
              *
              * @description
              *
@@ -2277,7 +2277,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * @param {Object=} parameters Request parameters.
              *
-             *  - `id` – `{*}` - Function id
+             *  - `id` – `{*}` - Right id
              *
              *  - `fk` – `{*}` - Foreign key for principals
              *
@@ -2301,83 +2301,83 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * <em>
              * (The remote method definition does not provide any description.
-             * This usually means the response is a `Function` object.)
+             * This usually means the response is a `Right` object.)
              * </em>
              */
             "prototype$__updateById__principals": {
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/Functions/:id/principals/:fk",
+              url: urlBase + "/Rights/:id/principals/:fk",
               method: "PUT",
             },
 
-            // INTERNAL. Use Function.functionCustomer.findById() instead.
-            "prototype$__findById__functionCustomer": {
+            // INTERNAL. Use Right.rightCustomer.findById() instead.
+            "prototype$__findById__rightCustomer": {
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/Functions/:id/functionCustomer/:fk",
+              url: urlBase + "/Rights/:id/rightCustomer/:fk",
               method: "GET",
             },
 
-            // INTERNAL. Use Function.functionCustomer.destroyById() instead.
-            "prototype$__destroyById__functionCustomer": {
+            // INTERNAL. Use Right.rightCustomer.destroyById() instead.
+            "prototype$__destroyById__rightCustomer": {
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/Functions/:id/functionCustomer/:fk",
+              url: urlBase + "/Rights/:id/rightCustomer/:fk",
               method: "DELETE",
             },
 
-            // INTERNAL. Use Function.functionCustomer.updateById() instead.
-            "prototype$__updateById__functionCustomer": {
+            // INTERNAL. Use Right.rightCustomer.updateById() instead.
+            "prototype$__updateById__rightCustomer": {
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/Functions/:id/functionCustomer/:fk",
+              url: urlBase + "/Rights/:id/rightCustomer/:fk",
               method: "PUT",
             },
 
-            // INTERNAL. Use Function.functionCustomer.link() instead.
-            "prototype$__link__functionCustomer": {
+            // INTERNAL. Use Right.rightCustomer.link() instead.
+            "prototype$__link__rightCustomer": {
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/Functions/:id/functionCustomer/rel/:fk",
+              url: urlBase + "/Rights/:id/rightCustomer/rel/:fk",
               method: "PUT",
             },
 
-            // INTERNAL. Use Function.functionCustomer.unlink() instead.
-            "prototype$__unlink__functionCustomer": {
+            // INTERNAL. Use Right.rightCustomer.unlink() instead.
+            "prototype$__unlink__rightCustomer": {
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/Functions/:id/functionCustomer/rel/:fk",
+              url: urlBase + "/Rights/:id/rightCustomer/rel/:fk",
               method: "DELETE",
             },
 
-            // INTERNAL. Use Function.functionCustomer.exists() instead.
-            "prototype$__exists__functionCustomer": {
+            // INTERNAL. Use Right.rightCustomer.exists() instead.
+            "prototype$__exists__rightCustomer": {
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/Functions/:id/functionCustomer/rel/:fk",
+              url: urlBase + "/Rights/:id/rightCustomer/rel/:fk",
               method: "HEAD",
             },
 
             /**
              * @ngdoc method
-             * @name lbServices.Function#prototype$__get__principals
-             * @methodOf lbServices.Function
+             * @name lbServices.Right#prototype$__get__principals
+             * @methodOf lbServices.Right
              *
              * @description
              *
-             * Queries principals of Function.
+             * Queries principals of Right.
              *
              * @param {Object=} parameters Request parameters.
              *
-             *  - `id` – `{*}` - Function id
+             *  - `id` – `{*}` - Right id
              *
              *  - `options` – `{object=}` -
              *
@@ -2397,19 +2397,19 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * <em>
              * (The remote method definition does not provide any description.
-             * This usually means the response is a `Function` object.)
+             * This usually means the response is a `Right` object.)
              * </em>
              */
             "prototype$__get__principals": {
               isArray: true,
-              url: urlBase + "/Functions/:id/principals",
+              url: urlBase + "/Rights/:id/principals",
               method: "GET",
             },
 
             /**
              * @ngdoc method
-             * @name lbServices.Function#prototype$__create__principals
-             * @methodOf lbServices.Function
+             * @name lbServices.Right#prototype$__create__principals
+             * @methodOf lbServices.Right
              *
              * @description
              *
@@ -2417,7 +2417,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * @param {Object=} parameters Request parameters.
              *
-             *  - `id` – `{*}` - Function id
+             *  - `id` – `{*}` - Right id
              *
              * @param {Object} postData Request data.
              *
@@ -2439,18 +2439,18 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * <em>
              * (The remote method definition does not provide any description.
-             * This usually means the response is a `Function` object.)
+             * This usually means the response is a `Right` object.)
              * </em>
              */
             "prototype$__create__principals": {
-              url: urlBase + "/Functions/:id/principals",
+              url: urlBase + "/Rights/:id/principals",
               method: "POST",
             },
 
             /**
              * @ngdoc method
-             * @name lbServices.Function#prototype$__delete__principals
-             * @methodOf lbServices.Function
+             * @name lbServices.Right#prototype$__delete__principals
+             * @methodOf lbServices.Right
              *
              * @description
              *
@@ -2458,7 +2458,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * @param {Object=} parameters Request parameters.
              *
-             *  - `id` – `{*}` - Function id
+             *  - `id` – `{*}` - Right id
              *
              *  - `options` – `{object=}` -
              *
@@ -2479,22 +2479,22 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * This method returns no data.
              */
             "prototype$__delete__principals": {
-              url: urlBase + "/Functions/:id/principals",
+              url: urlBase + "/Rights/:id/principals",
               method: "DELETE",
             },
 
             /**
              * @ngdoc method
-             * @name lbServices.Function#prototype$__count__principals
-             * @methodOf lbServices.Function
+             * @name lbServices.Right#prototype$__count__principals
+             * @methodOf lbServices.Right
              *
              * @description
              *
-             * Counts principals of Function.
+             * Counts principals of Right.
              *
              * @param {Object=} parameters Request parameters.
              *
-             *  - `id` – `{*}` - Function id
+             *  - `id` – `{*}` - Right id
              *
              *  - `options` – `{object=}` -
              *
@@ -2517,39 +2517,39 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *  - `count` – `{number=}` -
              */
             "prototype$__count__principals": {
-              url: urlBase + "/Functions/:id/principals/count",
+              url: urlBase + "/Rights/:id/principals/count",
               method: "GET",
             },
 
-            // INTERNAL. Use Function.functionCustomer() instead.
-            "prototype$__get__functionCustomer": {
+            // INTERNAL. Use Right.rightCustomer() instead.
+            "prototype$__get__rightCustomer": {
               isArray: true,
-              url: urlBase + "/Functions/:id/functionCustomer",
+              url: urlBase + "/Rights/:id/rightCustomer",
               method: "GET",
             },
 
-            // INTERNAL. Use Function.functionCustomer.create() instead.
-            "prototype$__create__functionCustomer": {
-              url: urlBase + "/Functions/:id/functionCustomer",
+            // INTERNAL. Use Right.rightCustomer.create() instead.
+            "prototype$__create__rightCustomer": {
+              url: urlBase + "/Rights/:id/rightCustomer",
               method: "POST",
             },
 
-            // INTERNAL. Use Function.functionCustomer.destroyAll() instead.
-            "prototype$__delete__functionCustomer": {
-              url: urlBase + "/Functions/:id/functionCustomer",
+            // INTERNAL. Use Right.rightCustomer.destroyAll() instead.
+            "prototype$__delete__rightCustomer": {
+              url: urlBase + "/Rights/:id/rightCustomer",
               method: "DELETE",
             },
 
-            // INTERNAL. Use Function.functionCustomer.count() instead.
-            "prototype$__count__functionCustomer": {
-              url: urlBase + "/Functions/:id/functionCustomer/count",
+            // INTERNAL. Use Right.rightCustomer.count() instead.
+            "prototype$__count__rightCustomer": {
+              url: urlBase + "/Rights/:id/rightCustomer/count",
               method: "GET",
             },
 
             /**
              * @ngdoc method
-             * @name lbServices.Function#create
-             * @methodOf lbServices.Function
+             * @name lbServices.Right#create
+             * @methodOf lbServices.Right
              *
              * @description
              *
@@ -2578,18 +2578,18 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * <em>
              * (The remote method definition does not provide any description.
-             * This usually means the response is a `Function` object.)
+             * This usually means the response is a `Right` object.)
              * </em>
              */
             "create": {
-              url: urlBase + "/Functions",
+              url: urlBase + "/Rights",
               method: "POST",
             },
 
             /**
              * @ngdoc method
-             * @name lbServices.Function#createMany
-             * @methodOf lbServices.Function
+             * @name lbServices.Right#createMany
+             * @methodOf lbServices.Right
              *
              * @description
              *
@@ -2618,19 +2618,19 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * <em>
              * (The remote method definition does not provide any description.
-             * This usually means the response is a `Function` object.)
+             * This usually means the response is a `Right` object.)
              * </em>
              */
             "createMany": {
               isArray: true,
-              url: urlBase + "/Functions",
+              url: urlBase + "/Rights",
               method: "POST",
             },
 
             /**
              * @ngdoc method
-             * @name lbServices.Function#patchOrCreate
-             * @methodOf lbServices.Function
+             * @name lbServices.Right#patchOrCreate
+             * @methodOf lbServices.Right
              *
              * @description
              *
@@ -2654,18 +2654,18 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * <em>
              * (The remote method definition does not provide any description.
-             * This usually means the response is a `Function` object.)
+             * This usually means the response is a `Right` object.)
              * </em>
              */
             "patchOrCreate": {
-              url: urlBase + "/Functions",
+              url: urlBase + "/Rights",
               method: "PATCH",
             },
 
             /**
              * @ngdoc method
-             * @name lbServices.Function#replaceOrCreate
-             * @methodOf lbServices.Function
+             * @name lbServices.Right#replaceOrCreate
+             * @methodOf lbServices.Right
              *
              * @description
              *
@@ -2694,18 +2694,18 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * <em>
              * (The remote method definition does not provide any description.
-             * This usually means the response is a `Function` object.)
+             * This usually means the response is a `Right` object.)
              * </em>
              */
             "replaceOrCreate": {
-              url: urlBase + "/Functions/replaceOrCreate",
+              url: urlBase + "/Rights/replaceOrCreate",
               method: "POST",
             },
 
             /**
              * @ngdoc method
-             * @name lbServices.Function#upsertWithWhere
-             * @methodOf lbServices.Function
+             * @name lbServices.Right#upsertWithWhere
+             * @methodOf lbServices.Right
              *
              * @description
              *
@@ -2733,18 +2733,18 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * <em>
              * (The remote method definition does not provide any description.
-             * This usually means the response is a `Function` object.)
+             * This usually means the response is a `Right` object.)
              * </em>
              */
             "upsertWithWhere": {
-              url: urlBase + "/Functions/upsertWithWhere",
+              url: urlBase + "/Rights/upsertWithWhere",
               method: "POST",
             },
 
             /**
              * @ngdoc method
-             * @name lbServices.Function#exists
-             * @methodOf lbServices.Function
+             * @name lbServices.Right#exists
+             * @methodOf lbServices.Right
              *
              * @description
              *
@@ -2771,14 +2771,14 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *  - `exists` – `{boolean=}` -
              */
             "exists": {
-              url: urlBase + "/Functions/:id/exists",
+              url: urlBase + "/Rights/:id/exists",
               method: "GET",
             },
 
             /**
              * @ngdoc method
-             * @name lbServices.Function#findById
-             * @methodOf lbServices.Function
+             * @name lbServices.Right#findById
+             * @methodOf lbServices.Right
              *
              * @description
              *
@@ -2804,18 +2804,18 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * <em>
              * (The remote method definition does not provide any description.
-             * This usually means the response is a `Function` object.)
+             * This usually means the response is a `Right` object.)
              * </em>
              */
             "findById": {
-              url: urlBase + "/Functions/:id",
+              url: urlBase + "/Rights/:id",
               method: "GET",
             },
 
             /**
              * @ngdoc method
-             * @name lbServices.Function#replaceById
-             * @methodOf lbServices.Function
+             * @name lbServices.Right#replaceById
+             * @methodOf lbServices.Right
              *
              * @description
              *
@@ -2843,18 +2843,18 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * <em>
              * (The remote method definition does not provide any description.
-             * This usually means the response is a `Function` object.)
+             * This usually means the response is a `Right` object.)
              * </em>
              */
             "replaceById": {
-              url: urlBase + "/Functions/:id/replace",
+              url: urlBase + "/Rights/:id/replace",
               method: "POST",
             },
 
             /**
              * @ngdoc method
-             * @name lbServices.Function#find
-             * @methodOf lbServices.Function
+             * @name lbServices.Right#find
+             * @methodOf lbServices.Right
              *
              * @description
              *
@@ -2878,19 +2878,19 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * <em>
              * (The remote method definition does not provide any description.
-             * This usually means the response is a `Function` object.)
+             * This usually means the response is a `Right` object.)
              * </em>
              */
             "find": {
               isArray: true,
-              url: urlBase + "/Functions",
+              url: urlBase + "/Rights",
               method: "GET",
             },
 
             /**
              * @ngdoc method
-             * @name lbServices.Function#findOne
-             * @methodOf lbServices.Function
+             * @name lbServices.Right#findOne
+             * @methodOf lbServices.Right
              *
              * @description
              *
@@ -2914,18 +2914,18 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * <em>
              * (The remote method definition does not provide any description.
-             * This usually means the response is a `Function` object.)
+             * This usually means the response is a `Right` object.)
              * </em>
              */
             "findOne": {
-              url: urlBase + "/Functions/findOne",
+              url: urlBase + "/Rights/findOne",
               method: "GET",
             },
 
             /**
              * @ngdoc method
-             * @name lbServices.Function#updateAll
-             * @methodOf lbServices.Function
+             * @name lbServices.Right#updateAll
+             * @methodOf lbServices.Right
              *
              * @description
              *
@@ -2954,14 +2954,14 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * Information related to the outcome of the operation
              */
             "updateAll": {
-              url: urlBase + "/Functions/update",
+              url: urlBase + "/Rights/update",
               method: "POST",
             },
 
             /**
              * @ngdoc method
-             * @name lbServices.Function#deleteById
-             * @methodOf lbServices.Function
+             * @name lbServices.Right#deleteById
+             * @methodOf lbServices.Right
              *
              * @description
              *
@@ -2985,18 +2985,18 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * <em>
              * (The remote method definition does not provide any description.
-             * This usually means the response is a `Function` object.)
+             * This usually means the response is a `Right` object.)
              * </em>
              */
             "deleteById": {
-              url: urlBase + "/Functions/:id",
+              url: urlBase + "/Rights/:id",
               method: "DELETE",
             },
 
             /**
              * @ngdoc method
-             * @name lbServices.Function#count
-             * @methodOf lbServices.Function
+             * @name lbServices.Right#count
+             * @methodOf lbServices.Right
              *
              * @description
              *
@@ -3023,14 +3023,14 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *  - `count` – `{number=}` -
              */
             "count": {
-              url: urlBase + "/Functions/count",
+              url: urlBase + "/Rights/count",
               method: "GET",
             },
 
             /**
              * @ngdoc method
-             * @name lbServices.Function#prototype$patchAttributes
-             * @methodOf lbServices.Function
+             * @name lbServices.Right#prototype$patchAttributes
+             * @methodOf lbServices.Right
              *
              * @description
              *
@@ -3038,7 +3038,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * @param {Object=} parameters Request parameters.
              *
-             *  - `id` – `{*}` - Function id
+             *  - `id` – `{*}` - Right id
              *
              *  - `options` – `{object=}` -
              *
@@ -3058,18 +3058,18 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * <em>
              * (The remote method definition does not provide any description.
-             * This usually means the response is a `Function` object.)
+             * This usually means the response is a `Right` object.)
              * </em>
              */
             "prototype$patchAttributes": {
-              url: urlBase + "/Functions/:id",
+              url: urlBase + "/Rights/:id",
               method: "PATCH",
             },
 
             /**
              * @ngdoc method
-             * @name lbServices.Function#createChangeStream
-             * @methodOf lbServices.Function
+             * @name lbServices.Right#createChangeStream
+             * @methodOf lbServices.Right
              *
              * @description
              *
@@ -3099,7 +3099,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *  - `changes` – `{ReadableStream=}` -
              */
             "createChangeStream": {
-              url: urlBase + "/Functions/change-stream",
+              url: urlBase + "/Rights/change-stream",
               method: "POST",
             },
 
@@ -3189,9 +3189,9 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               method: "GET",
             },
 
-            // INTERNAL. Use CustomerFunction.function() instead.
-            "::get::CustomerFunction::function": {
-              url: urlBase + "/CustomerFunctions/:id/function",
+            // INTERNAL. Use CustomerRight.function() instead.
+            "::get::CustomerRight::function": {
+              url: urlBase + "/CustomerRights/:id/function",
               method: "GET",
             },
           }
@@ -3201,8 +3201,8 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
 
             /**
              * @ngdoc method
-             * @name lbServices.Function#upsert
-             * @methodOf lbServices.Function
+             * @name lbServices.Right#upsert
+             * @methodOf lbServices.Right
              *
              * @description
              *
@@ -3226,15 +3226,15 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * <em>
              * (The remote method definition does not provide any description.
-             * This usually means the response is a `Function` object.)
+             * This usually means the response is a `Right` object.)
              * </em>
              */
         R["upsert"] = R["patchOrCreate"];
 
             /**
              * @ngdoc method
-             * @name lbServices.Function#updateOrCreate
-             * @methodOf lbServices.Function
+             * @name lbServices.Right#updateOrCreate
+             * @methodOf lbServices.Right
              *
              * @description
              *
@@ -3258,15 +3258,15 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * <em>
              * (The remote method definition does not provide any description.
-             * This usually means the response is a `Function` object.)
+             * This usually means the response is a `Right` object.)
              * </em>
              */
         R["updateOrCreate"] = R["patchOrCreate"];
 
             /**
              * @ngdoc method
-             * @name lbServices.Function#patchOrCreateWithWhere
-             * @methodOf lbServices.Function
+             * @name lbServices.Right#patchOrCreateWithWhere
+             * @methodOf lbServices.Right
              *
              * @description
              *
@@ -3294,15 +3294,15 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * <em>
              * (The remote method definition does not provide any description.
-             * This usually means the response is a `Function` object.)
+             * This usually means the response is a `Right` object.)
              * </em>
              */
         R["patchOrCreateWithWhere"] = R["upsertWithWhere"];
 
             /**
              * @ngdoc method
-             * @name lbServices.Function#update
-             * @methodOf lbServices.Function
+             * @name lbServices.Right#update
+             * @methodOf lbServices.Right
              *
              * @description
              *
@@ -3334,8 +3334,8 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
 
             /**
              * @ngdoc method
-             * @name lbServices.Function#destroyById
-             * @methodOf lbServices.Function
+             * @name lbServices.Right#destroyById
+             * @methodOf lbServices.Right
              *
              * @description
              *
@@ -3359,15 +3359,15 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * <em>
              * (The remote method definition does not provide any description.
-             * This usually means the response is a `Function` object.)
+             * This usually means the response is a `Right` object.)
              * </em>
              */
         R["destroyById"] = R["deleteById"];
 
             /**
              * @ngdoc method
-             * @name lbServices.Function#removeById
-             * @methodOf lbServices.Function
+             * @name lbServices.Right#removeById
+             * @methodOf lbServices.Right
              *
              * @description
              *
@@ -3391,15 +3391,15 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * <em>
              * (The remote method definition does not provide any description.
-             * This usually means the response is a `Function` object.)
+             * This usually means the response is a `Right` object.)
              * </em>
              */
         R["removeById"] = R["deleteById"];
 
             /**
              * @ngdoc method
-             * @name lbServices.Function#prototype$updateAttributes
-             * @methodOf lbServices.Function
+             * @name lbServices.Right#prototype$updateAttributes
+             * @methodOf lbServices.Right
              *
              * @description
              *
@@ -3407,7 +3407,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * @param {Object=} parameters Request parameters.
              *
-             *  - `id` – `{*}` - Function id
+             *  - `id` – `{*}` - Right id
              *
              *  - `options` – `{object=}` -
              *
@@ -3427,7 +3427,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * <em>
              * (The remote method definition does not provide any description.
-             * This usually means the response is a `Function` object.)
+             * This usually means the response is a `Right` object.)
              * </em>
              */
         R["prototype$updateAttributes"] = R["prototype$patchAttributes"];
@@ -3435,41 +3435,41 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
 
         /**
         * @ngdoc property
-        * @name lbServices.Function#modelName
-        * @propertyOf lbServices.Function
+        * @name lbServices.Right#modelName
+        * @propertyOf lbServices.Right
         * @description
         * The name of the model represented by this $resource,
-        * i.e. `Function`.
+        * i.e. `Right`.
         */
-        R.modelName = "Function";
+        R.modelName = "Right";
 
     /**
      * @ngdoc object
-     * @name lbServices.Function.functionCustomer
-     * @header lbServices.Function.functionCustomer
+     * @name lbServices.Right.rightCustomer
+     * @header lbServices.Right.rightCustomer
      * @object
      * @description
      *
-     * The object `Function.functionCustomer` groups methods
-     * manipulating `Customer` instances related to `Function`.
+     * The object `Right.rightCustomer` groups methods
+     * manipulating `Customer` instances related to `Right`.
      *
-     * Call {@link lbServices.Function#functionCustomer Function.functionCustomer()}
+     * Call {@link lbServices.Right#rightCustomer Right.rightCustomer()}
      * to query all related instances.
      */
 
 
             /**
              * @ngdoc method
-             * @name lbServices.Function#functionCustomer
-             * @methodOf lbServices.Function
+             * @name lbServices.Right#rightCustomer
+             * @methodOf lbServices.Right
              *
              * @description
              *
-             * Queries functionCustomer of Function.
+             * Queries rightCustomer of Right.
              *
              * @param {Object=} parameters Request parameters.
              *
-             *  - `id` – `{*}` - Function id
+             *  - `id` – `{*}` - Right id
              *
              *  - `options` – `{object=}` -
              *
@@ -3492,24 +3492,24 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * This usually means the response is a `Customer` object.)
              * </em>
              */
-        R.functionCustomer = function() {
+        R.rightCustomer = function() {
           var TargetResource = $injector.get("Customer");
-          var action = TargetResource["::get::Function::functionCustomer"];
+          var action = TargetResource["::get::Right::rightCustomer"];
           return action.apply(R, arguments);
         };
 
             /**
              * @ngdoc method
-             * @name lbServices.Function.functionCustomer#count
-             * @methodOf lbServices.Function.functionCustomer
+             * @name lbServices.Right.rightCustomer#count
+             * @methodOf lbServices.Right.rightCustomer
              *
              * @description
              *
-             * Counts functionCustomer of Function.
+             * Counts rightCustomer of Right.
              *
              * @param {Object=} parameters Request parameters.
              *
-             *  - `id` – `{*}` - Function id
+             *  - `id` – `{*}` - Right id
              *
              *  - `options` – `{object=}` -
              *
@@ -3531,24 +3531,24 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              *  - `count` – `{number=}` -
              */
-        R.functionCustomer.count = function() {
+        R.rightCustomer.count = function() {
           var TargetResource = $injector.get("Customer");
-          var action = TargetResource["::count::Function::functionCustomer"];
+          var action = TargetResource["::count::Right::rightCustomer"];
           return action.apply(R, arguments);
         };
 
             /**
              * @ngdoc method
-             * @name lbServices.Function.functionCustomer#create
-             * @methodOf lbServices.Function.functionCustomer
+             * @name lbServices.Right.rightCustomer#create
+             * @methodOf lbServices.Right.rightCustomer
              *
              * @description
              *
-             * Creates a new instance in functionCustomer of this model.
+             * Creates a new instance in rightCustomer of this model.
              *
              * @param {Object=} parameters Request parameters.
              *
-             *  - `id` – `{*}` - Function id
+             *  - `id` – `{*}` - Right id
              *
              * @param {Object} postData Request data.
              *
@@ -3573,24 +3573,24 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * This usually means the response is a `Customer` object.)
              * </em>
              */
-        R.functionCustomer.create = function() {
+        R.rightCustomer.create = function() {
           var TargetResource = $injector.get("Customer");
-          var action = TargetResource["::create::Function::functionCustomer"];
+          var action = TargetResource["::create::Right::rightCustomer"];
           return action.apply(R, arguments);
         };
 
             /**
              * @ngdoc method
-             * @name lbServices.Function.functionCustomer#createMany
-             * @methodOf lbServices.Function.functionCustomer
+             * @name lbServices.Right.rightCustomer#createMany
+             * @methodOf lbServices.Right.rightCustomer
              *
              * @description
              *
-             * Creates a new instance in functionCustomer of this model.
+             * Creates a new instance in rightCustomer of this model.
              *
              * @param {Object=} parameters Request parameters.
              *
-             *  - `id` – `{*}` - Function id
+             *  - `id` – `{*}` - Right id
              *
              * @param {Object} postData Request data.
              *
@@ -3615,24 +3615,24 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * This usually means the response is a `Customer` object.)
              * </em>
              */
-        R.functionCustomer.createMany = function() {
+        R.rightCustomer.createMany = function() {
           var TargetResource = $injector.get("Customer");
-          var action = TargetResource["::createMany::Function::functionCustomer"];
+          var action = TargetResource["::createMany::Right::rightCustomer"];
           return action.apply(R, arguments);
         };
 
             /**
              * @ngdoc method
-             * @name lbServices.Function.functionCustomer#destroyAll
-             * @methodOf lbServices.Function.functionCustomer
+             * @name lbServices.Right.rightCustomer#destroyAll
+             * @methodOf lbServices.Right.rightCustomer
              *
              * @description
              *
-             * Deletes all functionCustomer of this model.
+             * Deletes all rightCustomer of this model.
              *
              * @param {Object=} parameters Request parameters.
              *
-             *  - `id` – `{*}` - Function id
+             *  - `id` – `{*}` - Right id
              *
              *  - `options` – `{object=}` -
              *
@@ -3652,28 +3652,28 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * This method returns no data.
              */
-        R.functionCustomer.destroyAll = function() {
+        R.rightCustomer.destroyAll = function() {
           var TargetResource = $injector.get("Customer");
-          var action = TargetResource["::delete::Function::functionCustomer"];
+          var action = TargetResource["::delete::Right::rightCustomer"];
           return action.apply(R, arguments);
         };
 
             /**
              * @ngdoc method
-             * @name lbServices.Function.functionCustomer#destroyById
-             * @methodOf lbServices.Function.functionCustomer
+             * @name lbServices.Right.rightCustomer#destroyById
+             * @methodOf lbServices.Right.rightCustomer
              *
              * @description
              *
-             * Delete a related item by id for functionCustomer.
+             * Delete a related item by id for rightCustomer.
              *
              * @param {Object=} parameters Request parameters.
              *
-             *  - `id` – `{*}` - Function id
+             *  - `id` – `{*}` - Right id
              *
              *  - `options` – `{object=}` -
              *
-             *  - `fk` – `{*}` - Foreign key for functionCustomer
+             *  - `fk` – `{*}` - Foreign key for rightCustomer
              *
              *  - `options` – `{object=}` -
              *
@@ -3689,28 +3689,28 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * This method returns no data.
              */
-        R.functionCustomer.destroyById = function() {
+        R.rightCustomer.destroyById = function() {
           var TargetResource = $injector.get("Customer");
-          var action = TargetResource["::destroyById::Function::functionCustomer"];
+          var action = TargetResource["::destroyById::Right::rightCustomer"];
           return action.apply(R, arguments);
         };
 
             /**
              * @ngdoc method
-             * @name lbServices.Function.functionCustomer#exists
-             * @methodOf lbServices.Function.functionCustomer
+             * @name lbServices.Right.rightCustomer#exists
+             * @methodOf lbServices.Right.rightCustomer
              *
              * @description
              *
-             * Check the existence of functionCustomer relation to an item by id.
+             * Check the existence of rightCustomer relation to an item by id.
              *
              * @param {Object=} parameters Request parameters.
              *
-             *  - `id` – `{*}` - Function id
+             *  - `id` – `{*}` - Right id
              *
              *  - `options` – `{object=}` -
              *
-             *  - `fk` – `{*}` - Foreign key for functionCustomer
+             *  - `fk` – `{*}` - Foreign key for rightCustomer
              *
              *  - `options` – `{object=}` -
              *
@@ -3729,28 +3729,28 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * This usually means the response is a `Customer` object.)
              * </em>
              */
-        R.functionCustomer.exists = function() {
+        R.rightCustomer.exists = function() {
           var TargetResource = $injector.get("Customer");
-          var action = TargetResource["::exists::Function::functionCustomer"];
+          var action = TargetResource["::exists::Right::rightCustomer"];
           return action.apply(R, arguments);
         };
 
             /**
              * @ngdoc method
-             * @name lbServices.Function.functionCustomer#findById
-             * @methodOf lbServices.Function.functionCustomer
+             * @name lbServices.Right.rightCustomer#findById
+             * @methodOf lbServices.Right.rightCustomer
              *
              * @description
              *
-             * Find a related item by id for functionCustomer.
+             * Find a related item by id for rightCustomer.
              *
              * @param {Object=} parameters Request parameters.
              *
-             *  - `id` – `{*}` - Function id
+             *  - `id` – `{*}` - Right id
              *
              *  - `options` – `{object=}` -
              *
-             *  - `fk` – `{*}` - Foreign key for functionCustomer
+             *  - `fk` – `{*}` - Foreign key for rightCustomer
              *
              *  - `options` – `{object=}` -
              *
@@ -3769,26 +3769,26 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * This usually means the response is a `Customer` object.)
              * </em>
              */
-        R.functionCustomer.findById = function() {
+        R.rightCustomer.findById = function() {
           var TargetResource = $injector.get("Customer");
-          var action = TargetResource["::findById::Function::functionCustomer"];
+          var action = TargetResource["::findById::Right::rightCustomer"];
           return action.apply(R, arguments);
         };
 
             /**
              * @ngdoc method
-             * @name lbServices.Function.functionCustomer#link
-             * @methodOf lbServices.Function.functionCustomer
+             * @name lbServices.Right.rightCustomer#link
+             * @methodOf lbServices.Right.rightCustomer
              *
              * @description
              *
-             * Add a related item by id for functionCustomer.
+             * Add a related item by id for rightCustomer.
              *
              * @param {Object=} parameters Request parameters.
              *
-             *  - `id` – `{*}` - Function id
+             *  - `id` – `{*}` - Right id
              *
-             *  - `fk` – `{*}` - Foreign key for functionCustomer
+             *  - `fk` – `{*}` - Foreign key for rightCustomer
              *
              * @param {Object} postData Request data.
              *
@@ -3813,28 +3813,28 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * This usually means the response is a `Customer` object.)
              * </em>
              */
-        R.functionCustomer.link = function() {
+        R.rightCustomer.link = function() {
           var TargetResource = $injector.get("Customer");
-          var action = TargetResource["::link::Function::functionCustomer"];
+          var action = TargetResource["::link::Right::rightCustomer"];
           return action.apply(R, arguments);
         };
 
             /**
              * @ngdoc method
-             * @name lbServices.Function.functionCustomer#unlink
-             * @methodOf lbServices.Function.functionCustomer
+             * @name lbServices.Right.rightCustomer#unlink
+             * @methodOf lbServices.Right.rightCustomer
              *
              * @description
              *
-             * Remove the functionCustomer relation to an item by id.
+             * Remove the rightCustomer relation to an item by id.
              *
              * @param {Object=} parameters Request parameters.
              *
-             *  - `id` – `{*}` - Function id
+             *  - `id` – `{*}` - Right id
              *
              *  - `options` – `{object=}` -
              *
-             *  - `fk` – `{*}` - Foreign key for functionCustomer
+             *  - `fk` – `{*}` - Foreign key for rightCustomer
              *
              *  - `options` – `{object=}` -
              *
@@ -3850,26 +3850,26 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * This method returns no data.
              */
-        R.functionCustomer.unlink = function() {
+        R.rightCustomer.unlink = function() {
           var TargetResource = $injector.get("Customer");
-          var action = TargetResource["::unlink::Function::functionCustomer"];
+          var action = TargetResource["::unlink::Right::rightCustomer"];
           return action.apply(R, arguments);
         };
 
             /**
              * @ngdoc method
-             * @name lbServices.Function.functionCustomer#updateById
-             * @methodOf lbServices.Function.functionCustomer
+             * @name lbServices.Right.rightCustomer#updateById
+             * @methodOf lbServices.Right.rightCustomer
              *
              * @description
              *
-             * Update a related item by id for functionCustomer.
+             * Update a related item by id for rightCustomer.
              *
              * @param {Object=} parameters Request parameters.
              *
-             *  - `id` – `{*}` - Function id
+             *  - `id` – `{*}` - Right id
              *
-             *  - `fk` – `{*}` - Foreign key for functionCustomer
+             *  - `fk` – `{*}` - Foreign key for rightCustomer
              *
              * @param {Object} postData Request data.
              *
@@ -3894,9 +3894,9 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * This usually means the response is a `Customer` object.)
              * </em>
              */
-        R.functionCustomer.updateById = function() {
+        R.rightCustomer.updateById = function() {
           var TargetResource = $injector.get("Customer");
-          var action = TargetResource["::updateById::Function::functionCustomer"];
+          var action = TargetResource["::updateById::Right::rightCustomer"];
           return action.apply(R, arguments);
         };
 
@@ -3906,13 +3906,13 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
 
 /**
  * @ngdoc object
- * @name lbServices.CustomerFunction
- * @header lbServices.CustomerFunction
+ * @name lbServices.CustomerRight
+ * @header lbServices.CustomerRight
  * @object
  *
  * @description
  *
- * A $resource object for interacting with the `CustomerFunction` model.
+ * A $resource object for interacting with the `CustomerRight` model.
  *
  * **Details**
  *
@@ -3926,19 +3926,19 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
  *
  */
   module.factory(
-    "CustomerFunction",
+    "CustomerRight",
     [
       'LoopBackResource', 'LoopBackAuth', '$injector', '$q',
       function(LoopBackResource, LoopBackAuth, $injector, $q) {
         var R = LoopBackResource(
-        urlBase + "/CustomerFunctions/:id",
+        urlBase + "/CustomerRights/:id",
           { 'id': '@id' },
           {
 
             /**
              * @ngdoc method
-             * @name lbServices.CustomerFunction#prototype$__get__role
-             * @methodOf lbServices.CustomerFunction
+             * @name lbServices.CustomerRight#prototype$__get__role
+             * @methodOf lbServices.CustomerRight
              *
              * @description
              *
@@ -3946,7 +3946,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * @param {Object=} parameters Request parameters.
              *
-             *  - `id` – `{*}` - CustomerFunction id
+             *  - `id` – `{*}` - CustomerRight id
              *
              *  - `options` – `{object=}` -
              *
@@ -3966,30 +3966,30 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * <em>
              * (The remote method definition does not provide any description.
-             * This usually means the response is a `CustomerFunction` object.)
+             * This usually means the response is a `CustomerRight` object.)
              * </em>
              */
             "prototype$__get__role": {
-              url: urlBase + "/CustomerFunctions/:id/role",
+              url: urlBase + "/CustomerRights/:id/role",
               method: "GET",
             },
 
-            // INTERNAL. Use CustomerFunction.customer() instead.
+            // INTERNAL. Use CustomerRight.customer() instead.
             "prototype$__get__customer": {
-              url: urlBase + "/CustomerFunctions/:id/customer",
+              url: urlBase + "/CustomerRights/:id/customer",
               method: "GET",
             },
 
-            // INTERNAL. Use CustomerFunction.function() instead.
+            // INTERNAL. Use CustomerRight.function() instead.
             "prototype$__get__function": {
-              url: urlBase + "/CustomerFunctions/:id/function",
+              url: urlBase + "/CustomerRights/:id/function",
               method: "GET",
             },
 
             /**
              * @ngdoc method
-             * @name lbServices.CustomerFunction#create
-             * @methodOf lbServices.CustomerFunction
+             * @name lbServices.CustomerRight#create
+             * @methodOf lbServices.CustomerRight
              *
              * @description
              *
@@ -4018,18 +4018,18 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * <em>
              * (The remote method definition does not provide any description.
-             * This usually means the response is a `CustomerFunction` object.)
+             * This usually means the response is a `CustomerRight` object.)
              * </em>
              */
             "create": {
-              url: urlBase + "/CustomerFunctions",
+              url: urlBase + "/CustomerRights",
               method: "POST",
             },
 
             /**
              * @ngdoc method
-             * @name lbServices.CustomerFunction#createMany
-             * @methodOf lbServices.CustomerFunction
+             * @name lbServices.CustomerRight#createMany
+             * @methodOf lbServices.CustomerRight
              *
              * @description
              *
@@ -4058,19 +4058,19 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * <em>
              * (The remote method definition does not provide any description.
-             * This usually means the response is a `CustomerFunction` object.)
+             * This usually means the response is a `CustomerRight` object.)
              * </em>
              */
             "createMany": {
               isArray: true,
-              url: urlBase + "/CustomerFunctions",
+              url: urlBase + "/CustomerRights",
               method: "POST",
             },
 
             /**
              * @ngdoc method
-             * @name lbServices.CustomerFunction#patchOrCreate
-             * @methodOf lbServices.CustomerFunction
+             * @name lbServices.CustomerRight#patchOrCreate
+             * @methodOf lbServices.CustomerRight
              *
              * @description
              *
@@ -4094,18 +4094,18 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * <em>
              * (The remote method definition does not provide any description.
-             * This usually means the response is a `CustomerFunction` object.)
+             * This usually means the response is a `CustomerRight` object.)
              * </em>
              */
             "patchOrCreate": {
-              url: urlBase + "/CustomerFunctions",
+              url: urlBase + "/CustomerRights",
               method: "PATCH",
             },
 
             /**
              * @ngdoc method
-             * @name lbServices.CustomerFunction#replaceOrCreate
-             * @methodOf lbServices.CustomerFunction
+             * @name lbServices.CustomerRight#replaceOrCreate
+             * @methodOf lbServices.CustomerRight
              *
              * @description
              *
@@ -4134,18 +4134,18 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * <em>
              * (The remote method definition does not provide any description.
-             * This usually means the response is a `CustomerFunction` object.)
+             * This usually means the response is a `CustomerRight` object.)
              * </em>
              */
             "replaceOrCreate": {
-              url: urlBase + "/CustomerFunctions/replaceOrCreate",
+              url: urlBase + "/CustomerRights/replaceOrCreate",
               method: "POST",
             },
 
             /**
              * @ngdoc method
-             * @name lbServices.CustomerFunction#upsertWithWhere
-             * @methodOf lbServices.CustomerFunction
+             * @name lbServices.CustomerRight#upsertWithWhere
+             * @methodOf lbServices.CustomerRight
              *
              * @description
              *
@@ -4173,18 +4173,18 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * <em>
              * (The remote method definition does not provide any description.
-             * This usually means the response is a `CustomerFunction` object.)
+             * This usually means the response is a `CustomerRight` object.)
              * </em>
              */
             "upsertWithWhere": {
-              url: urlBase + "/CustomerFunctions/upsertWithWhere",
+              url: urlBase + "/CustomerRights/upsertWithWhere",
               method: "POST",
             },
 
             /**
              * @ngdoc method
-             * @name lbServices.CustomerFunction#exists
-             * @methodOf lbServices.CustomerFunction
+             * @name lbServices.CustomerRight#exists
+             * @methodOf lbServices.CustomerRight
              *
              * @description
              *
@@ -4211,14 +4211,14 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *  - `exists` – `{boolean=}` -
              */
             "exists": {
-              url: urlBase + "/CustomerFunctions/:id/exists",
+              url: urlBase + "/CustomerRights/:id/exists",
               method: "GET",
             },
 
             /**
              * @ngdoc method
-             * @name lbServices.CustomerFunction#findById
-             * @methodOf lbServices.CustomerFunction
+             * @name lbServices.CustomerRight#findById
+             * @methodOf lbServices.CustomerRight
              *
              * @description
              *
@@ -4244,18 +4244,18 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * <em>
              * (The remote method definition does not provide any description.
-             * This usually means the response is a `CustomerFunction` object.)
+             * This usually means the response is a `CustomerRight` object.)
              * </em>
              */
             "findById": {
-              url: urlBase + "/CustomerFunctions/:id",
+              url: urlBase + "/CustomerRights/:id",
               method: "GET",
             },
 
             /**
              * @ngdoc method
-             * @name lbServices.CustomerFunction#replaceById
-             * @methodOf lbServices.CustomerFunction
+             * @name lbServices.CustomerRight#replaceById
+             * @methodOf lbServices.CustomerRight
              *
              * @description
              *
@@ -4283,18 +4283,18 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * <em>
              * (The remote method definition does not provide any description.
-             * This usually means the response is a `CustomerFunction` object.)
+             * This usually means the response is a `CustomerRight` object.)
              * </em>
              */
             "replaceById": {
-              url: urlBase + "/CustomerFunctions/:id/replace",
+              url: urlBase + "/CustomerRights/:id/replace",
               method: "POST",
             },
 
             /**
              * @ngdoc method
-             * @name lbServices.CustomerFunction#find
-             * @methodOf lbServices.CustomerFunction
+             * @name lbServices.CustomerRight#find
+             * @methodOf lbServices.CustomerRight
              *
              * @description
              *
@@ -4318,19 +4318,19 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * <em>
              * (The remote method definition does not provide any description.
-             * This usually means the response is a `CustomerFunction` object.)
+             * This usually means the response is a `CustomerRight` object.)
              * </em>
              */
             "find": {
               isArray: true,
-              url: urlBase + "/CustomerFunctions",
+              url: urlBase + "/CustomerRights",
               method: "GET",
             },
 
             /**
              * @ngdoc method
-             * @name lbServices.CustomerFunction#findOne
-             * @methodOf lbServices.CustomerFunction
+             * @name lbServices.CustomerRight#findOne
+             * @methodOf lbServices.CustomerRight
              *
              * @description
              *
@@ -4354,18 +4354,18 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * <em>
              * (The remote method definition does not provide any description.
-             * This usually means the response is a `CustomerFunction` object.)
+             * This usually means the response is a `CustomerRight` object.)
              * </em>
              */
             "findOne": {
-              url: urlBase + "/CustomerFunctions/findOne",
+              url: urlBase + "/CustomerRights/findOne",
               method: "GET",
             },
 
             /**
              * @ngdoc method
-             * @name lbServices.CustomerFunction#updateAll
-             * @methodOf lbServices.CustomerFunction
+             * @name lbServices.CustomerRight#updateAll
+             * @methodOf lbServices.CustomerRight
              *
              * @description
              *
@@ -4394,14 +4394,14 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * Information related to the outcome of the operation
              */
             "updateAll": {
-              url: urlBase + "/CustomerFunctions/update",
+              url: urlBase + "/CustomerRights/update",
               method: "POST",
             },
 
             /**
              * @ngdoc method
-             * @name lbServices.CustomerFunction#deleteById
-             * @methodOf lbServices.CustomerFunction
+             * @name lbServices.CustomerRight#deleteById
+             * @methodOf lbServices.CustomerRight
              *
              * @description
              *
@@ -4425,18 +4425,18 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * <em>
              * (The remote method definition does not provide any description.
-             * This usually means the response is a `CustomerFunction` object.)
+             * This usually means the response is a `CustomerRight` object.)
              * </em>
              */
             "deleteById": {
-              url: urlBase + "/CustomerFunctions/:id",
+              url: urlBase + "/CustomerRights/:id",
               method: "DELETE",
             },
 
             /**
              * @ngdoc method
-             * @name lbServices.CustomerFunction#count
-             * @methodOf lbServices.CustomerFunction
+             * @name lbServices.CustomerRight#count
+             * @methodOf lbServices.CustomerRight
              *
              * @description
              *
@@ -4463,14 +4463,14 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *  - `count` – `{number=}` -
              */
             "count": {
-              url: urlBase + "/CustomerFunctions/count",
+              url: urlBase + "/CustomerRights/count",
               method: "GET",
             },
 
             /**
              * @ngdoc method
-             * @name lbServices.CustomerFunction#prototype$patchAttributes
-             * @methodOf lbServices.CustomerFunction
+             * @name lbServices.CustomerRight#prototype$patchAttributes
+             * @methodOf lbServices.CustomerRight
              *
              * @description
              *
@@ -4478,7 +4478,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * @param {Object=} parameters Request parameters.
              *
-             *  - `id` – `{*}` - CustomerFunction id
+             *  - `id` – `{*}` - CustomerRight id
              *
              *  - `options` – `{object=}` -
              *
@@ -4498,18 +4498,18 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * <em>
              * (The remote method definition does not provide any description.
-             * This usually means the response is a `CustomerFunction` object.)
+             * This usually means the response is a `CustomerRight` object.)
              * </em>
              */
             "prototype$patchAttributes": {
-              url: urlBase + "/CustomerFunctions/:id",
+              url: urlBase + "/CustomerRights/:id",
               method: "PATCH",
             },
 
             /**
              * @ngdoc method
-             * @name lbServices.CustomerFunction#createChangeStream
-             * @methodOf lbServices.CustomerFunction
+             * @name lbServices.CustomerRight#createChangeStream
+             * @methodOf lbServices.CustomerRight
              *
              * @description
              *
@@ -4539,7 +4539,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *  - `changes` – `{ReadableStream=}` -
              */
             "createChangeStream": {
-              url: urlBase + "/CustomerFunctions/change-stream",
+              url: urlBase + "/CustomerRights/change-stream",
               method: "POST",
             },
           }
@@ -4549,8 +4549,8 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
 
             /**
              * @ngdoc method
-             * @name lbServices.CustomerFunction#upsert
-             * @methodOf lbServices.CustomerFunction
+             * @name lbServices.CustomerRight#upsert
+             * @methodOf lbServices.CustomerRight
              *
              * @description
              *
@@ -4574,15 +4574,15 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * <em>
              * (The remote method definition does not provide any description.
-             * This usually means the response is a `CustomerFunction` object.)
+             * This usually means the response is a `CustomerRight` object.)
              * </em>
              */
         R["upsert"] = R["patchOrCreate"];
 
             /**
              * @ngdoc method
-             * @name lbServices.CustomerFunction#updateOrCreate
-             * @methodOf lbServices.CustomerFunction
+             * @name lbServices.CustomerRight#updateOrCreate
+             * @methodOf lbServices.CustomerRight
              *
              * @description
              *
@@ -4606,15 +4606,15 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * <em>
              * (The remote method definition does not provide any description.
-             * This usually means the response is a `CustomerFunction` object.)
+             * This usually means the response is a `CustomerRight` object.)
              * </em>
              */
         R["updateOrCreate"] = R["patchOrCreate"];
 
             /**
              * @ngdoc method
-             * @name lbServices.CustomerFunction#patchOrCreateWithWhere
-             * @methodOf lbServices.CustomerFunction
+             * @name lbServices.CustomerRight#patchOrCreateWithWhere
+             * @methodOf lbServices.CustomerRight
              *
              * @description
              *
@@ -4642,15 +4642,15 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * <em>
              * (The remote method definition does not provide any description.
-             * This usually means the response is a `CustomerFunction` object.)
+             * This usually means the response is a `CustomerRight` object.)
              * </em>
              */
         R["patchOrCreateWithWhere"] = R["upsertWithWhere"];
 
             /**
              * @ngdoc method
-             * @name lbServices.CustomerFunction#update
-             * @methodOf lbServices.CustomerFunction
+             * @name lbServices.CustomerRight#update
+             * @methodOf lbServices.CustomerRight
              *
              * @description
              *
@@ -4682,8 +4682,8 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
 
             /**
              * @ngdoc method
-             * @name lbServices.CustomerFunction#destroyById
-             * @methodOf lbServices.CustomerFunction
+             * @name lbServices.CustomerRight#destroyById
+             * @methodOf lbServices.CustomerRight
              *
              * @description
              *
@@ -4707,15 +4707,15 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * <em>
              * (The remote method definition does not provide any description.
-             * This usually means the response is a `CustomerFunction` object.)
+             * This usually means the response is a `CustomerRight` object.)
              * </em>
              */
         R["destroyById"] = R["deleteById"];
 
             /**
              * @ngdoc method
-             * @name lbServices.CustomerFunction#removeById
-             * @methodOf lbServices.CustomerFunction
+             * @name lbServices.CustomerRight#removeById
+             * @methodOf lbServices.CustomerRight
              *
              * @description
              *
@@ -4739,15 +4739,15 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * <em>
              * (The remote method definition does not provide any description.
-             * This usually means the response is a `CustomerFunction` object.)
+             * This usually means the response is a `CustomerRight` object.)
              * </em>
              */
         R["removeById"] = R["deleteById"];
 
             /**
              * @ngdoc method
-             * @name lbServices.CustomerFunction#prototype$updateAttributes
-             * @methodOf lbServices.CustomerFunction
+             * @name lbServices.CustomerRight#prototype$updateAttributes
+             * @methodOf lbServices.CustomerRight
              *
              * @description
              *
@@ -4755,7 +4755,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * @param {Object=} parameters Request parameters.
              *
-             *  - `id` – `{*}` - CustomerFunction id
+             *  - `id` – `{*}` - CustomerRight id
              *
              *  - `options` – `{object=}` -
              *
@@ -4775,7 +4775,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * <em>
              * (The remote method definition does not provide any description.
-             * This usually means the response is a `CustomerFunction` object.)
+             * This usually means the response is a `CustomerRight` object.)
              * </em>
              */
         R["prototype$updateAttributes"] = R["prototype$patchAttributes"];
@@ -4783,19 +4783,19 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
 
         /**
         * @ngdoc property
-        * @name lbServices.CustomerFunction#modelName
-        * @propertyOf lbServices.CustomerFunction
+        * @name lbServices.CustomerRight#modelName
+        * @propertyOf lbServices.CustomerRight
         * @description
         * The name of the model represented by this $resource,
-        * i.e. `CustomerFunction`.
+        * i.e. `CustomerRight`.
         */
-        R.modelName = "CustomerFunction";
+        R.modelName = "CustomerRight";
 
 
             /**
              * @ngdoc method
-             * @name lbServices.CustomerFunction#customer
-             * @methodOf lbServices.CustomerFunction
+             * @name lbServices.CustomerRight#customer
+             * @methodOf lbServices.CustomerRight
              *
              * @description
              *
@@ -4803,7 +4803,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * @param {Object=} parameters Request parameters.
              *
-             *  - `id` – `{*}` - CustomerFunction id
+             *  - `id` – `{*}` - CustomerRight id
              *
              *  - `options` – `{object=}` -
              *
@@ -4828,14 +4828,14 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              */
         R.customer = function() {
           var TargetResource = $injector.get("Customer");
-          var action = TargetResource["::get::CustomerFunction::customer"];
+          var action = TargetResource["::get::CustomerRight::customer"];
           return action.apply(R, arguments);
         };
 
             /**
              * @ngdoc method
-             * @name lbServices.CustomerFunction#function
-             * @methodOf lbServices.CustomerFunction
+             * @name lbServices.CustomerRight#function
+             * @methodOf lbServices.CustomerRight
              *
              * @description
              *
@@ -4843,7 +4843,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * @param {Object=} parameters Request parameters.
              *
-             *  - `id` – `{*}` - CustomerFunction id
+             *  - `id` – `{*}` - CustomerRight id
              *
              *  - `options` – `{object=}` -
              *
@@ -4863,12 +4863,12 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * <em>
              * (The remote method definition does not provide any description.
-             * This usually means the response is a `Function` object.)
+             * This usually means the response is a `Right` object.)
              * </em>
              */
         R.function = function() {
-          var TargetResource = $injector.get("Function");
-          var action = TargetResource["::get::CustomerFunction::function"];
+          var TargetResource = $injector.get("Right");
+          var action = TargetResource["::get::CustomerRight::function"];
           return action.apply(R, arguments);
         };
 

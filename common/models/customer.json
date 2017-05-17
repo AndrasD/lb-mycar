@@ -10,9 +10,9 @@
   "relations": {
     "customerFunction": {
       "type": "hasMany",
-      "model": "Function",
+      "model": "Right",
       "foreignKey": "principalId",
-      "through": "CustomerFunction"
+      "through": "CustomerRight"
     }
   },
   "acls": [
