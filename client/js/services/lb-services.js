@@ -14,7 +14,6 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
   'use strict';
 
   var urlBase = "/api";
-  //var urlBase = "https://sxs-user.herokuapp.com/api";
   var authHeader = 'authorization';
 
   function getHost(url) {
@@ -192,57 +191,57 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               method: "PUT",
             },
 
-            // INTERNAL. Use Customer.customerFunction.findById() instead.
-            "prototype$__findById__customerFunction": {
+            // INTERNAL. Use Customer.customerRight.findById() instead.
+            "prototype$__findById__customerRight": {
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/Customers/:id/customerFunction/:fk",
+              url: urlBase + "/Customers/:id/customerRight/:fk",
               method: "GET",
             },
 
-            // INTERNAL. Use Customer.customerFunction.destroyById() instead.
-            "prototype$__destroyById__customerFunction": {
+            // INTERNAL. Use Customer.customerRight.destroyById() instead.
+            "prototype$__destroyById__customerRight": {
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/Customers/:id/customerFunction/:fk",
+              url: urlBase + "/Customers/:id/customerRight/:fk",
               method: "DELETE",
             },
 
-            // INTERNAL. Use Customer.customerFunction.updateById() instead.
-            "prototype$__updateById__customerFunction": {
+            // INTERNAL. Use Customer.customerRight.updateById() instead.
+            "prototype$__updateById__customerRight": {
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/Customers/:id/customerFunction/:fk",
+              url: urlBase + "/Customers/:id/customerRight/:fk",
               method: "PUT",
             },
 
-            // INTERNAL. Use Customer.customerFunction.link() instead.
-            "prototype$__link__customerFunction": {
+            // INTERNAL. Use Customer.customerRight.link() instead.
+            "prototype$__link__customerRight": {
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/Customers/:id/customerFunction/rel/:fk",
+              url: urlBase + "/Customers/:id/customerRight/rel/:fk",
               method: "PUT",
             },
 
-            // INTERNAL. Use Customer.customerFunction.unlink() instead.
-            "prototype$__unlink__customerFunction": {
+            // INTERNAL. Use Customer.customerRight.unlink() instead.
+            "prototype$__unlink__customerRight": {
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/Customers/:id/customerFunction/rel/:fk",
+              url: urlBase + "/Customers/:id/customerRight/rel/:fk",
               method: "DELETE",
             },
 
-            // INTERNAL. Use Customer.customerFunction.exists() instead.
-            "prototype$__exists__customerFunction": {
+            // INTERNAL. Use Customer.customerRight.exists() instead.
+            "prototype$__exists__customerRight": {
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/Customers/:id/customerFunction/rel/:fk",
+              url: urlBase + "/Customers/:id/customerRight/rel/:fk",
               method: "HEAD",
             },
 
@@ -401,28 +400,28 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               method: "GET",
             },
 
-            // INTERNAL. Use Customer.customerFunction() instead.
-            "prototype$__get__customerFunction": {
+            // INTERNAL. Use Customer.customerRight() instead.
+            "prototype$__get__customerRight": {
               isArray: true,
-              url: urlBase + "/Customers/:id/customerFunction",
+              url: urlBase + "/Customers/:id/customerRight",
               method: "GET",
             },
 
-            // INTERNAL. Use Customer.customerFunction.create() instead.
-            "prototype$__create__customerFunction": {
-              url: urlBase + "/Customers/:id/customerFunction",
+            // INTERNAL. Use Customer.customerRight.create() instead.
+            "prototype$__create__customerRight": {
+              url: urlBase + "/Customers/:id/customerRight",
               method: "POST",
             },
 
-            // INTERNAL. Use Customer.customerFunction.destroyAll() instead.
-            "prototype$__delete__customerFunction": {
-              url: urlBase + "/Customers/:id/customerFunction",
+            // INTERNAL. Use Customer.customerRight.destroyAll() instead.
+            "prototype$__delete__customerRight": {
+              url: urlBase + "/Customers/:id/customerRight",
               method: "DELETE",
             },
 
-            // INTERNAL. Use Customer.customerFunction.count() instead.
-            "prototype$__count__customerFunction": {
-              url: urlBase + "/Customers/:id/customerFunction/count",
+            // INTERNAL. Use Customer.customerRight.count() instead.
+            "prototype$__count__customerRight": {
+              url: urlBase + "/Customers/:id/customerRight/count",
               method: "GET",
             },
 
@@ -1700,27 +1699,27 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
 
     /**
      * @ngdoc object
-     * @name lbServices.Customer.customerFunction
-     * @header lbServices.Customer.customerFunction
+     * @name lbServices.Customer.customerRight
+     * @header lbServices.Customer.customerRight
      * @object
      * @description
      *
-     * The object `Customer.customerFunction` groups methods
+     * The object `Customer.customerRight` groups methods
      * manipulating `Right` instances related to `Customer`.
      *
-     * Call {@link lbServices.Customer#customerFunction Customer.customerFunction()}
+     * Call {@link lbServices.Customer#customerRight Customer.customerRight()}
      * to query all related instances.
      */
 
 
             /**
              * @ngdoc method
-             * @name lbServices.Customer#customerFunction
+             * @name lbServices.Customer#customerRight
              * @methodOf lbServices.Customer
              *
              * @description
              *
-             * Queries customerFunction of Customer.
+             * Queries customerRight of Customer.
              *
              * @param {Object=} parameters Request parameters.
              *
@@ -1747,20 +1746,20 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * This usually means the response is a `Right` object.)
              * </em>
              */
-        R.customerFunction = function() {
+        R.customerRight = function() {
           var TargetResource = $injector.get("Right");
-          var action = TargetResource["::get::Customer::customerFunction"];
+          var action = TargetResource["::get::Customer::customerRight"];
           return action.apply(R, arguments);
         };
 
             /**
              * @ngdoc method
-             * @name lbServices.Customer.customerFunction#count
-             * @methodOf lbServices.Customer.customerFunction
+             * @name lbServices.Customer.customerRight#count
+             * @methodOf lbServices.Customer.customerRight
              *
              * @description
              *
-             * Counts customerFunction of Customer.
+             * Counts customerRight of Customer.
              *
              * @param {Object=} parameters Request parameters.
              *
@@ -1786,20 +1785,20 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              *  - `count` – `{number=}` -
              */
-        R.customerFunction.count = function() {
+        R.customerRight.count = function() {
           var TargetResource = $injector.get("Right");
-          var action = TargetResource["::count::Customer::customerFunction"];
+          var action = TargetResource["::count::Customer::customerRight"];
           return action.apply(R, arguments);
         };
 
             /**
              * @ngdoc method
-             * @name lbServices.Customer.customerFunction#create
-             * @methodOf lbServices.Customer.customerFunction
+             * @name lbServices.Customer.customerRight#create
+             * @methodOf lbServices.Customer.customerRight
              *
              * @description
              *
-             * Creates a new instance in customerFunction of this model.
+             * Creates a new instance in customerRight of this model.
              *
              * @param {Object=} parameters Request parameters.
              *
@@ -1828,20 +1827,20 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * This usually means the response is a `Right` object.)
              * </em>
              */
-        R.customerFunction.create = function() {
+        R.customerRight.create = function() {
           var TargetResource = $injector.get("Right");
-          var action = TargetResource["::create::Customer::customerFunction"];
+          var action = TargetResource["::create::Customer::customerRight"];
           return action.apply(R, arguments);
         };
 
             /**
              * @ngdoc method
-             * @name lbServices.Customer.customerFunction#createMany
-             * @methodOf lbServices.Customer.customerFunction
+             * @name lbServices.Customer.customerRight#createMany
+             * @methodOf lbServices.Customer.customerRight
              *
              * @description
              *
-             * Creates a new instance in customerFunction of this model.
+             * Creates a new instance in customerRight of this model.
              *
              * @param {Object=} parameters Request parameters.
              *
@@ -1870,20 +1869,20 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * This usually means the response is a `Right` object.)
              * </em>
              */
-        R.customerFunction.createMany = function() {
+        R.customerRight.createMany = function() {
           var TargetResource = $injector.get("Right");
-          var action = TargetResource["::createMany::Customer::customerFunction"];
+          var action = TargetResource["::createMany::Customer::customerRight"];
           return action.apply(R, arguments);
         };
 
             /**
              * @ngdoc method
-             * @name lbServices.Customer.customerFunction#destroyAll
-             * @methodOf lbServices.Customer.customerFunction
+             * @name lbServices.Customer.customerRight#destroyAll
+             * @methodOf lbServices.Customer.customerRight
              *
              * @description
              *
-             * Deletes all customerFunction of this model.
+             * Deletes all customerRight of this model.
              *
              * @param {Object=} parameters Request parameters.
              *
@@ -1907,20 +1906,20 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * This method returns no data.
              */
-        R.customerFunction.destroyAll = function() {
+        R.customerRight.destroyAll = function() {
           var TargetResource = $injector.get("Right");
-          var action = TargetResource["::delete::Customer::customerFunction"];
+          var action = TargetResource["::delete::Customer::customerRight"];
           return action.apply(R, arguments);
         };
 
             /**
              * @ngdoc method
-             * @name lbServices.Customer.customerFunction#destroyById
-             * @methodOf lbServices.Customer.customerFunction
+             * @name lbServices.Customer.customerRight#destroyById
+             * @methodOf lbServices.Customer.customerRight
              *
              * @description
              *
-             * Delete a related item by id for customerFunction.
+             * Delete a related item by id for customerRight.
              *
              * @param {Object=} parameters Request parameters.
              *
@@ -1928,7 +1927,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              *  - `options` – `{object=}` -
              *
-             *  - `fk` – `{*}` - Foreign key for customerFunction
+             *  - `fk` – `{*}` - Foreign key for customerRight
              *
              *  - `options` – `{object=}` -
              *
@@ -1944,20 +1943,20 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * This method returns no data.
              */
-        R.customerFunction.destroyById = function() {
+        R.customerRight.destroyById = function() {
           var TargetResource = $injector.get("Right");
-          var action = TargetResource["::destroyById::Customer::customerFunction"];
+          var action = TargetResource["::destroyById::Customer::customerRight"];
           return action.apply(R, arguments);
         };
 
             /**
              * @ngdoc method
-             * @name lbServices.Customer.customerFunction#exists
-             * @methodOf lbServices.Customer.customerFunction
+             * @name lbServices.Customer.customerRight#exists
+             * @methodOf lbServices.Customer.customerRight
              *
              * @description
              *
-             * Check the existence of customerFunction relation to an item by id.
+             * Check the existence of customerRight relation to an item by id.
              *
              * @param {Object=} parameters Request parameters.
              *
@@ -1965,7 +1964,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              *  - `options` – `{object=}` -
              *
-             *  - `fk` – `{*}` - Foreign key for customerFunction
+             *  - `fk` – `{*}` - Foreign key for customerRight
              *
              *  - `options` – `{object=}` -
              *
@@ -1984,20 +1983,20 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * This usually means the response is a `Right` object.)
              * </em>
              */
-        R.customerFunction.exists = function() {
+        R.customerRight.exists = function() {
           var TargetResource = $injector.get("Right");
-          var action = TargetResource["::exists::Customer::customerFunction"];
+          var action = TargetResource["::exists::Customer::customerRight"];
           return action.apply(R, arguments);
         };
 
             /**
              * @ngdoc method
-             * @name lbServices.Customer.customerFunction#findById
-             * @methodOf lbServices.Customer.customerFunction
+             * @name lbServices.Customer.customerRight#findById
+             * @methodOf lbServices.Customer.customerRight
              *
              * @description
              *
-             * Find a related item by id for customerFunction.
+             * Find a related item by id for customerRight.
              *
              * @param {Object=} parameters Request parameters.
              *
@@ -2005,7 +2004,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              *  - `options` – `{object=}` -
              *
-             *  - `fk` – `{*}` - Foreign key for customerFunction
+             *  - `fk` – `{*}` - Foreign key for customerRight
              *
              *  - `options` – `{object=}` -
              *
@@ -2024,26 +2023,26 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * This usually means the response is a `Right` object.)
              * </em>
              */
-        R.customerFunction.findById = function() {
+        R.customerRight.findById = function() {
           var TargetResource = $injector.get("Right");
-          var action = TargetResource["::findById::Customer::customerFunction"];
+          var action = TargetResource["::findById::Customer::customerRight"];
           return action.apply(R, arguments);
         };
 
             /**
              * @ngdoc method
-             * @name lbServices.Customer.customerFunction#link
-             * @methodOf lbServices.Customer.customerFunction
+             * @name lbServices.Customer.customerRight#link
+             * @methodOf lbServices.Customer.customerRight
              *
              * @description
              *
-             * Add a related item by id for customerFunction.
+             * Add a related item by id for customerRight.
              *
              * @param {Object=} parameters Request parameters.
              *
              *  - `id` – `{*}` - Customer id
              *
-             *  - `fk` – `{*}` - Foreign key for customerFunction
+             *  - `fk` – `{*}` - Foreign key for customerRight
              *
              * @param {Object} postData Request data.
              *
@@ -2068,20 +2067,20 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * This usually means the response is a `Right` object.)
              * </em>
              */
-        R.customerFunction.link = function() {
+        R.customerRight.link = function() {
           var TargetResource = $injector.get("Right");
-          var action = TargetResource["::link::Customer::customerFunction"];
+          var action = TargetResource["::link::Customer::customerRight"];
           return action.apply(R, arguments);
         };
 
             /**
              * @ngdoc method
-             * @name lbServices.Customer.customerFunction#unlink
-             * @methodOf lbServices.Customer.customerFunction
+             * @name lbServices.Customer.customerRight#unlink
+             * @methodOf lbServices.Customer.customerRight
              *
              * @description
              *
-             * Remove the customerFunction relation to an item by id.
+             * Remove the customerRight relation to an item by id.
              *
              * @param {Object=} parameters Request parameters.
              *
@@ -2089,7 +2088,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              *  - `options` – `{object=}` -
              *
-             *  - `fk` – `{*}` - Foreign key for customerFunction
+             *  - `fk` – `{*}` - Foreign key for customerRight
              *
              *  - `options` – `{object=}` -
              *
@@ -2105,26 +2104,26 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * This method returns no data.
              */
-        R.customerFunction.unlink = function() {
+        R.customerRight.unlink = function() {
           var TargetResource = $injector.get("Right");
-          var action = TargetResource["::unlink::Customer::customerFunction"];
+          var action = TargetResource["::unlink::Customer::customerRight"];
           return action.apply(R, arguments);
         };
 
             /**
              * @ngdoc method
-             * @name lbServices.Customer.customerFunction#updateById
-             * @methodOf lbServices.Customer.customerFunction
+             * @name lbServices.Customer.customerRight#updateById
+             * @methodOf lbServices.Customer.customerRight
              *
              * @description
              *
-             * Update a related item by id for customerFunction.
+             * Update a related item by id for customerRight.
              *
              * @param {Object=} parameters Request parameters.
              *
              *  - `id` – `{*}` - Customer id
              *
-             *  - `fk` – `{*}` - Foreign key for customerFunction
+             *  - `fk` – `{*}` - Foreign key for customerRight
              *
              * @param {Object} postData Request data.
              *
@@ -2149,9 +2148,9 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * This usually means the response is a `Right` object.)
              * </em>
              */
-        R.customerFunction.updateById = function() {
+        R.customerRight.updateById = function() {
           var TargetResource = $injector.get("Right");
-          var action = TargetResource["::updateById::Customer::customerFunction"];
+          var action = TargetResource["::updateById::Customer::customerRight"];
           return action.apply(R, arguments);
         };
 
@@ -3104,95 +3103,95 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               method: "POST",
             },
 
-            // INTERNAL. Use Customer.customerFunction.findById() instead.
-            "::findById::Customer::customerFunction": {
+            // INTERNAL. Use Customer.customerRight.findById() instead.
+            "::findById::Customer::customerRight": {
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/Customers/:id/customerFunction/:fk",
+              url: urlBase + "/Customers/:id/customerRight/:fk",
               method: "GET",
             },
 
-            // INTERNAL. Use Customer.customerFunction.destroyById() instead.
-            "::destroyById::Customer::customerFunction": {
+            // INTERNAL. Use Customer.customerRight.destroyById() instead.
+            "::destroyById::Customer::customerRight": {
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/Customers/:id/customerFunction/:fk",
+              url: urlBase + "/Customers/:id/customerRight/:fk",
               method: "DELETE",
             },
 
-            // INTERNAL. Use Customer.customerFunction.updateById() instead.
-            "::updateById::Customer::customerFunction": {
+            // INTERNAL. Use Customer.customerRight.updateById() instead.
+            "::updateById::Customer::customerRight": {
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/Customers/:id/customerFunction/:fk",
+              url: urlBase + "/Customers/:id/customerRight/:fk",
               method: "PUT",
             },
 
-            // INTERNAL. Use Customer.customerFunction.link() instead.
-            "::link::Customer::customerFunction": {
+            // INTERNAL. Use Customer.customerRight.link() instead.
+            "::link::Customer::customerRight": {
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/Customers/:id/customerFunction/rel/:fk",
+              url: urlBase + "/Customers/:id/customerRight/rel/:fk",
               method: "PUT",
             },
 
-            // INTERNAL. Use Customer.customerFunction.unlink() instead.
-            "::unlink::Customer::customerFunction": {
+            // INTERNAL. Use Customer.customerRight.unlink() instead.
+            "::unlink::Customer::customerRight": {
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/Customers/:id/customerFunction/rel/:fk",
+              url: urlBase + "/Customers/:id/customerRight/rel/:fk",
               method: "DELETE",
             },
 
-            // INTERNAL. Use Customer.customerFunction.exists() instead.
-            "::exists::Customer::customerFunction": {
+            // INTERNAL. Use Customer.customerRight.exists() instead.
+            "::exists::Customer::customerRight": {
               params: {
                 'fk': '@fk',
               },
-              url: urlBase + "/Customers/:id/customerFunction/rel/:fk",
+              url: urlBase + "/Customers/:id/customerRight/rel/:fk",
               method: "HEAD",
             },
 
-            // INTERNAL. Use Customer.customerFunction() instead.
-            "::get::Customer::customerFunction": {
+            // INTERNAL. Use Customer.customerRight() instead.
+            "::get::Customer::customerRight": {
               isArray: true,
-              url: urlBase + "/Customers/:id/customerFunction",
+              url: urlBase + "/Customers/:id/customerRight",
               method: "GET",
             },
 
-            // INTERNAL. Use Customer.customerFunction.create() instead.
-            "::create::Customer::customerFunction": {
-              url: urlBase + "/Customers/:id/customerFunction",
+            // INTERNAL. Use Customer.customerRight.create() instead.
+            "::create::Customer::customerRight": {
+              url: urlBase + "/Customers/:id/customerRight",
               method: "POST",
             },
 
-            // INTERNAL. Use Customer.customerFunction.createMany() instead.
-            "::createMany::Customer::customerFunction": {
+            // INTERNAL. Use Customer.customerRight.createMany() instead.
+            "::createMany::Customer::customerRight": {
               isArray: true,
-              url: urlBase + "/Customers/:id/customerFunction",
+              url: urlBase + "/Customers/:id/customerRight",
               method: "POST",
             },
 
-            // INTERNAL. Use Customer.customerFunction.destroyAll() instead.
-            "::delete::Customer::customerFunction": {
-              url: urlBase + "/Customers/:id/customerFunction",
+            // INTERNAL. Use Customer.customerRight.destroyAll() instead.
+            "::delete::Customer::customerRight": {
+              url: urlBase + "/Customers/:id/customerRight",
               method: "DELETE",
             },
 
-            // INTERNAL. Use Customer.customerFunction.count() instead.
-            "::count::Customer::customerFunction": {
-              url: urlBase + "/Customers/:id/customerFunction/count",
+            // INTERNAL. Use Customer.customerRight.count() instead.
+            "::count::Customer::customerRight": {
+              url: urlBase + "/Customers/:id/customerRight/count",
               method: "GET",
             },
 
-            // INTERNAL. Use CustomerRight.function() instead.
-            "::get::CustomerRight::function": {
-              url: urlBase + "/CustomerRights/:id/function",
+            // INTERNAL. Use CustomerRight.right() instead.
+            "::get::CustomerRight::right": {
+              url: urlBase + "/CustomerRights/:id/right",
               method: "GET",
             },
           }
@@ -3981,9 +3980,9 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
               method: "GET",
             },
 
-            // INTERNAL. Use CustomerRight.function() instead.
-            "prototype$__get__function": {
-              url: urlBase + "/CustomerRights/:id/function",
+            // INTERNAL. Use CustomerRight.right() instead.
+            "prototype$__get__right": {
+              url: urlBase + "/CustomerRights/:id/right",
               method: "GET",
             },
 
@@ -4835,12 +4834,12 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
 
             /**
              * @ngdoc method
-             * @name lbServices.CustomerRight#function
+             * @name lbServices.CustomerRight#right
              * @methodOf lbServices.CustomerRight
              *
              * @description
              *
-             * Fetches belongsTo relation function.
+             * Fetches belongsTo relation right.
              *
              * @param {Object=} parameters Request parameters.
              *
@@ -4867,9 +4866,9 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * This usually means the response is a `Right` object.)
              * </em>
              */
-        R.function = function() {
+        R.right = function() {
           var TargetResource = $injector.get("Right");
-          var action = TargetResource["::get::CustomerRight::function"];
+          var action = TargetResource["::get::CustomerRight::right"];
           return action.apply(R, arguments);
         };
 

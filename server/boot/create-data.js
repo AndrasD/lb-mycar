@@ -48,6 +48,11 @@ module.exports = function(app) {
       Right.create({
         name: 'admin',
         description: 'Administrator'
+      });
+
+      Right.create({   
+        name: 'user',
+        description: 'Default-right'        
       }, cb);
     });
   }
@@ -57,11 +62,19 @@ module.exports = function(app) {
     mysqlDs.automigrate('CustomerRight', function(err) {
       if (err) return cb(err);
 
-      CustomerRight.create({
+      CustomerRight.create([{
         principalType: CustomerRight.USER,
         principalId: 1,
-        roleId: 1     
-      }, cb);
+        roleId: 1    
+      }, {   
+        principalType: CustomerRight.USER,
+        principalId: 2,
+        roleId: 2    
+      }, {   
+        principalType: CustomerRight.USER,
+        principalId: 3,
+        roleId: 2    
+      }], cb);
     });
   }  
 };

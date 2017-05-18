@@ -1,6 +1,7 @@
 angular
   .module('app')
-  .factory('AuthService', ['Customer', '$q', '$rootScope', '$state', 'toaster', function(Customer, $q, $rootScope, $state, toaster) {
+  .factory('AuthService',
+   ['Customer', '$q', '$rootScope', '$state', 'toaster', function(Customer, $q, $rootScope, $state, toaster) {
 
     function login(email, password) {
       return Customer
@@ -8,14 +9,15 @@ angular
         .$promise
         .then(function(response) {
           toaster.pop("success", "", "Logged in successfully!", 5000, 'trustedHtml');
-//          var szerep = role(response.user.id);
-          $rootScope.currentUser = {
-            id: response.user.id,
-            tokenId: response.id,
-            email: email,
-            username: response.user.username,
-//            role: szerep.name
-          }
+          role(response.user.id).then(function(resp) {
+            $rootScope.currentUser = {
+              id: response.user.id,
+              tokenId: response.id,
+              email: email,
+              username: response.user.username,
+              role: resp[0].name
+            }
+          })
         })
         .catch(function(error) {
           toaster.pop("error", "", "Login failed.", 10000, 'trustedHtml');
@@ -44,12 +46,15 @@ angular
     function refresh(accessTokenId) {
       return Customer
         .getCurrent(function(userResource) {
-          $rootScope.currentUser = {
-            id: userResource.id,
-            tokenId: accessTokenId,
-            email: userResource.email,
-            username: userResource.username
-          };
+          role(userResource.id).then(function(resp) {
+            $rootScope.currentUser = {
+              id: userResource.id,
+              tokenId: accessTokenId,
+              email: userResource.email,
+              username: userResource.username,
+              role: resp[0].name
+            };
+          })
         });
     }
 
@@ -58,10 +63,7 @@ angular
        .customerRight({
         id: userId
        })
-       .$promise
-       .then(function(resp) {
-        resp.name;
-       });
+       .$promise;
     }
 
     return {

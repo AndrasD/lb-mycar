@@ -1,36 +1,37 @@
 angular
   .module('app')
-  .controller('AuthLoginController', ['$scope', '$rootScope', 'AuthService', '$state', function($scope, $rootScope, AuthService, $state) {
+  .controller('AuthLoginController',
+   ['$scope', '$rootScope', 'AuthService', '$state', 'toaster', function($scope, $rootScope, AuthService, $state, toaster) {
     $scope.user = {
       email: '',
       password: ''
     };
 
     $scope.login = function() {
-      AuthService.login($scope.user.email, $scope.user.password)
-        .then(function() {
+      if (!$rootScope.currentUser) {    
+        AuthService.login($scope.user.email, $scope.user.password)
+          .then(function() {
 
-          // return to saved returnTo state before redirection to login
-          if ($scope.returnTo && $scope.returnTo.state) {
-            $state.go(
-              $scope.returnTo.state.name,
-              $scope.returnTo.params
-            );
-            // maintain the inherited rootscope variable returnTo
-            // but make the returnTo state of it null,
-            // so it can be used again after a new login.
-            $scope.returnTo.state  = null;
-            $scope.returnTo.params = null;
-            return;
-          }
-          // or go to the default state after login
-          $scope.user = null;
-          if ($rootScope.currentUser != null) {
+            // return to saved returnTo state before redirection to login
+            if ($scope.returnTo && $scope.returnTo.state) {
+              $state.go(
+                $scope.returnTo.state.name,
+                $scope.returnTo.params
+              );
+              // maintain the inherited rootscope variable returnTo
+              // but make the returnTo state of it null,
+              // so it can be used again after a new login.
+              $scope.returnTo.state  = null;
+              $scope.returnTo.params = null;
+              return;
+            }
+            // or go to the default state after login
+            $scope.user = null;
             $state.go('dashboard');
-          } else {
-            $state.go('login');          
-          } 
         });
+      } else {
+        toaster.pop("info", "", "Please log out first!", 5000, 'trustedHtml');
+      }
     };
   }])
 

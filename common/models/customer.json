@@ -8,7 +8,7 @@
   "properties": {},
   "validations": [],
   "relations": {
-    "customerFunction": {
+    "customerRight": {
       "type": "hasMany",
       "model": "Right",
       "foreignKey": "principalId",

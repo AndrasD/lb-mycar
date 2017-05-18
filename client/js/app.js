@@ -10,7 +10,8 @@ angular
       .state('dashboard', {
         url: '/dashboard',
         templateUrl: 'views/dashboard.view.html',
-        controller: 'dashboardController'
+        controller: 'dashboardController',
+        authenticate: true
       })
       .state('login', {
         url: '/login',
@@ -20,6 +21,12 @@ angular
       .state('logout', {
         url: '/logout',
         controller: 'AuthLogoutController'
+      })
+      .state('customer', {
+        url: '/customer/:id',
+        templateUrl: 'views/customer.view.html',
+        controller: 'customerController',
+        authenticate: true
       });
     $urlRouterProvider.otherwise('login');
   }])
@@ -38,7 +45,7 @@ angular
           params: toParams
         };
 
-        $state.go('dashboard');
+        $state.go('login');
       }
     });
 
@@ -47,4 +54,5 @@ angular
     if (LoopBackAuth.accessTokenId && !$rootScope.currentUser) {
       AuthService.refresh(LoopBackAuth.accessTokenId);
     }
+
   }]);
