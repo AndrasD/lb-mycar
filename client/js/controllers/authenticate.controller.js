@@ -29,8 +29,6 @@ angular
             $scope.user = null;
             $state.go('dashboard');
         });
-      } else {
-        toaster.pop("info", "", "Please log out first!", 5000, 'trustedHtml');
       }
     };
   }])

@@ -16,7 +16,8 @@ angular
       .state('login', {
         url: '/login',
         templateUrl: 'views/login.view.html',
-        controller: 'AuthLoginController'
+        controller: 'AuthLoginController',
+        authenticate: false
       })
       .state('logout', {
         url: '/logout',
@@ -46,6 +47,8 @@ angular
         };
 
         $state.go('login');
+      } else {
+        $state.go('dashboard');       
       }
     });
 
