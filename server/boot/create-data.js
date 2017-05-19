@@ -3,7 +3,7 @@
 var async = require('async');
 module.exports = function(app) {
   //data sources
-  var mysqlDs = app.dataSources.mysqlDs;
+  var mysqlDs = app.dataSources.db;
   var Customer = app.models.Customer;
   var Right = app.models.Right;
   var CustomerRight = app.models.CustomerRight;

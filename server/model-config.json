@@ -37,15 +37,15 @@
     "public": false
   },
   "Customer": {
-    "dataSource": "mysqlDs",
+    "dataSource": "db",
     "public": true
   },
   "Right": {
-    "dataSource": "mysqlDs",
+    "dataSource": "db",
     "public": true
   },
   "CustomerRight": {
-    "dataSource": "mysqlDs",
+    "dataSource": "db",
     "public": true
   }
 }
