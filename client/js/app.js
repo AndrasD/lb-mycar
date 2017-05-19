@@ -7,21 +7,31 @@ angular
   .module('app', ['ui.router', 'lbServices', 'ngAnimate', 'toaster', 'ngMap'])
   .config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
     $stateProvider
-      .state('forbidden', {
-        url: '/forbidden',
-        templateUrl: 'views/forbidden.html',
+      .state('dashboard', {
+        url: '/dashboard',
+        templateUrl: 'views/dashboard.view.html',
+        controller: 'dashboardController',
+        authenticate: true
       })
       .state('login', {
         url: '/login',
         templateUrl: 'views/login.view.html',
-        controller: 'AuthLoginController'
+        controller: 'AuthLoginController',
+        authenticate: false
       })
       .state('logout', {
         url: '/logout',
         controller: 'AuthLogoutController'
+      })
+      .state('customer', {
+        url: '/customer/:id',
+        templateUrl: 'views/customer.view.html',
+        controller: 'customerController',
+        authenticate: true
       });
     $urlRouterProvider.otherwise('login');
   }])
+  
   .run(['$rootScope', '$state', 'LoopBackAuth', 'AuthService', function($rootScope, $state, LoopBackAuth, AuthService) {
     $rootScope.$on('$stateChangeStart', function(event, toState, toParams) {
       // redirect to login page if not logged in
@@ -36,7 +46,9 @@ angular
           params: toParams
         };
 
-        $state.go('forbidden');
+        $state.go('login');
+      } else {
+        $state.go('dashboard');       
       }
     });
 
@@ -45,4 +57,5 @@ angular
     if (LoopBackAuth.accessTokenId && !$rootScope.currentUser) {
       AuthService.refresh(LoopBackAuth.accessTokenId);
     }
+
   }]);

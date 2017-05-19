@@ -8,9 +8,9 @@
     "port": 3306,
     "url": "",
     "database": "sixishu_track",
-    "password": "Pw001",
+    "password": "Bandur_1963",
     "name": "mysqlDs",
-    "user": "root",
+    "user": "andras",
     "connector": "mysql"
   }
 }

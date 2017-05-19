@@ -40,11 +40,11 @@
     "dataSource": "mysqlDs",
     "public": true
   },
-  "Function": {
+  "Right": {
     "dataSource": "mysqlDs",
     "public": true
   },
-  "CustomerFunction": {
+  "CustomerRight": {
     "dataSource": "mysqlDs",
     "public": true
   }

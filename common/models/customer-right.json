@@ -1,5 +1,5 @@
 {
-  "name": "CustomerFunction",
+  "name": "CustomerRight",
   "base": "RoleMapping",
   "idInjection": true,
   "options": {
@@ -13,9 +13,9 @@
       "model": "Customer",
       "foreignKey": "principalId"
     },
-    "function": {
+    "right": {
       "type": "belongsTo",
-      "model": "Function",
+      "model": "Right",
       "foreignKey": "roleId"
     }
   },

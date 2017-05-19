@@ -5,16 +5,16 @@ module.exports = function(app) {
   //data sources
   var mysqlDs = app.dataSources.mysqlDs;
   var Customer = app.models.Customer;
-  var Function = app.models.Function;
-  var CustomerFunction = app.models.CustomerFunction;
+  var Right = app.models.Right;
+  var CustomerRight = app.models.CustomerRight;
 
   //create all models
   async.parallel({
        customers: async.apply(createCustomers),
-       functions: async.apply(createFunctions),
+       functions: async.apply(createRights),
   }, function(err, results) {
     if (err) throw err;
-    createCustomersFunctions(results.customers, results.functions, function(err) {
+    createCustomersRights(results.customers, results.rights, function(err) {
       console.log('> models created sucessfully');
     });
   });
@@ -41,27 +41,40 @@ module.exports = function(app) {
   }
 
   //create function
-  function createFunctions(cb) {
-    mysqlDs.automigrate('Function', function(err) {
+  function createRights(cb) {
+    mysqlDs.automigrate('Right', function(err) {
       if (err) return cb(err);
 
-      Function.create({
+      Right.create({
         name: 'admin',
         description: 'Administrator'
+      });
+
+      Right.create({   
+        name: 'user',
+        description: 'Default-right'        
       }, cb);
     });
   }
 
   //create reviews
-  function createCustomersFunctions(customers, functions, cb) {
-    mysqlDs.automigrate('CustomerFunction', function(err) {
+  function createCustomersRights(customers, rights, cb) {
+    mysqlDs.automigrate('CustomerRight', function(err) {
       if (err) return cb(err);
 
-      CustomerFunction.create({
-        principalType: CustomerFunction.USER,
+      CustomerRight.create([{
+        principalType: CustomerRight.USER,
         principalId: 1,
-        roleId: 1     
-      }, cb);
+        roleId: 1    
+      }, {   
+        principalType: CustomerRight.USER,
+        principalId: 2,
+        roleId: 2    
+      }, {   
+        principalType: CustomerRight.USER,
+        principalId: 3,
+        roleId: 2    
+      }], cb);
     });
   }  
 };
