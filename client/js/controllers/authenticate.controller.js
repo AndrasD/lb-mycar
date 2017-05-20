@@ -1,7 +1,7 @@
 angular
   .module('app')
   .controller('AuthLoginController',
-   ['$scope', '$rootScope', 'AuthService', '$state', 'toaster', function($scope, $rootScope, AuthService, $state, toaster) {
+   ['$scope', '$rootScope', 'AuthService', '$state', function($scope, $rootScope, AuthService, $state) {
     $scope.user = {
       email: '',
       password: ''

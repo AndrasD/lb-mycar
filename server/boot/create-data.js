@@ -2,16 +2,16 @@
 
 var async = require('async');
 module.exports = function(app) {
-  //data sources
+  //  data sources
   var mysqlDs = app.dataSources.mysqlDs;
   var Customer = app.models.Customer;
   var Right = app.models.Right;
   var CustomerRight = app.models.CustomerRight;
 
-  //create all models
+  //  create all models
   async.parallel({
-       customers: async.apply(createCustomers),
-       functions: async.apply(createRights),
+    customers: async.apply(createCustomers),
+    functions: async.apply(createRights),
   }, function(err, results) {
     if (err) throw err;
     createCustomersRights(results.customers, results.rights, function(err) {
@@ -19,11 +19,11 @@ module.exports = function(app) {
     });
   });
 
-  //create customer
+  //  create customer
   function createCustomers(cb) {
     mysqlDs.automigrate('Customer', function(err) {
       if (err) return cb(err);
-      
+
       Customer.create([{
         email: 'foo@bar.com',
         password: 'foobar',
@@ -40,24 +40,24 @@ module.exports = function(app) {
     });
   }
 
-  //create function
+  //  create function
   function createRights(cb) {
     mysqlDs.automigrate('Right', function(err) {
       if (err) return cb(err);
 
       Right.create({
         name: 'admin',
-        description: 'Administrator'
+        description: 'Administrator',
       });
 
-      Right.create({   
+      Right.create({
         name: 'user',
-        description: 'Default-right'        
+        description: 'Default-right',
       }, cb);
     });
   }
 
-  //create reviews
+  //  create reviews
   function createCustomersRights(customers, rights, cb) {
     mysqlDs.automigrate('CustomerRight', function(err) {
       if (err) return cb(err);
@@ -65,16 +65,16 @@ module.exports = function(app) {
       CustomerRight.create([{
         principalType: CustomerRight.USER,
         principalId: 1,
-        roleId: 1    
-      }, {   
+        roleId: 1,
+      }, {
         principalType: CustomerRight.USER,
         principalId: 2,
-        roleId: 2    
-      }, {   
+        roleId: 2,
+      }, {
         principalType: CustomerRight.USER,
         principalId: 3,
-        roleId: 2    
+        roleId: 2,
       }], cb);
     });
-  }  
+  }
 };
