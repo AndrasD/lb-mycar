@@ -1,8 +1,9 @@
 angular
   .module('app')
-  .controller('dashboardController', 
-   ['$scope', '$rootScope', 'DashService', '$state', 'ngMap', function ($scope, $rootScope, DashService, $state, ngMap) {
+  .controller('dashboardController',
+   ['$scope', '$rootScope', 'DashService', '$state', function ($scope, $rootScope, DashService, $state) {
     //initially set those objects to null to avoid undefined error
-    $scope.comboNames = [];
+    $scope.selectedName = "";
+    $scope.sims = DashService.simcard();
 
 }]);

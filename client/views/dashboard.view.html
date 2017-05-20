@@ -3,9 +3,8 @@
         <div class="col-sm-2">
             <div class="input-group">
                 <span class="input-group-addon">Phone</span>
-                <select class="form-control">
+                <select class="form-control" ng-options="sim.name for sim in sims" ng-model="selectedName">
                     <option value="" disabled selected>Select number</option>
-                    <option ng-repeat="x in comboNames">{{x}}</option>
                 </select>
             </div>
         </div>
