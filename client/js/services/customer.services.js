@@ -1,7 +1,7 @@
 angular
   .module('app')
   .factory('CustomerService',
-   ['Customer', '$q', '$rootScope', '$state', 'toaster', function(Customer, $q, $rootScope, $state, toaster) {
+   ['Customer', 'toaster', function(Customer, toaster) {
 
     function getCurrentCustomer() {
         var customer = {

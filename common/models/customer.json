@@ -13,6 +13,11 @@
       "model": "Right",
       "foreignKey": "principalId",
       "through": "CustomerRight"
+    },
+    "simcards": {
+      "type": "hasMany",
+      "model": "Simcard",
+      "foreignKey": "customerId"
     }
   },
   "acls": [
@@ -33,7 +38,7 @@
       "principalType": "ROLE",
       "principalId": "$authenticated",
       "permission": "ALLOW"
-    }  
+    }
   ],
   "methods": {}
 }

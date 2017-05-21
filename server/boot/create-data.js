@@ -7,16 +7,40 @@ module.exports = function(app) {
   var Customer = app.models.Customer;
   var Right = app.models.Right;
   var CustomerRight = app.models.CustomerRight;
+  var Simcard = app.models.Simcard;
+  var Coordinate = app.model.Coordinate;
 
   //  create all models
-  async.parallel({
-    customers: async.apply(createCustomers),
-    functions: async.apply(createRights),
-  }, function(err, results) {
-    if (err) throw err;
-    createCustomersRights(results.customers, results.rights, function(err) {
-      console.log('> models created sucessfully');
-    });
+
+  async.series([
+    function(callback) {
+      async.parallel({
+        customers: async.apply(createCustomers),
+        rights: async.apply(createRights) 
+      }, function(err, results) {
+        if (err) throw err;
+        createCustomersRights(results.customers, results.rights, function(err) {
+          console.log('> customer and rights created sucessfully');
+          callback();
+        });
+      });
+    },
+    function(callback) {
+      createSimcards(function(err) {
+        if (err) return callback(err);
+        console.log('> simcard created sucessfully');
+        callback();
+      });
+    },
+    function(callback) {
+      createCoordinates(function(err) {
+        if (err) return callback(err);
+        console.log('> coordinate created sucessfully');
+        callback();
+      });
+    }
+  ], function(err) {
+    if (err) return next(err);
   });
 
   //  create customer
@@ -40,7 +64,7 @@ module.exports = function(app) {
     });
   }
 
-  //  create function
+  //  create right
   function createRights(cb) {
     mysqlDs.automigrate('Right', function(err) {
       if (err) return cb(err);
@@ -57,7 +81,7 @@ module.exports = function(app) {
     });
   }
 
-  //  create reviews
+  //  create customerright
   function createCustomersRights(customers, rights, cb) {
     mysqlDs.automigrate('CustomerRight', function(err) {
       if (err) return cb(err);
@@ -77,4 +101,30 @@ module.exports = function(app) {
       }], cb);
     });
   }
+
+  //  create simcard
+  function createSimcards(cb) {
+    mysqlDs.automigrate('Simcard', function(err) {
+      if (err) return cb(err);
+
+      Simcard.create([{
+        customerId: 1,
+        imei: 'IMEI1234567890',
+        number: '+36-20-222-7326',
+      }], cb);
+    });
+  }
+
+  //  create coordinate
+  function createCoordinates(cb) {
+    mysqlDs.autoupdate('Coordinate', function(err) {
+      if (err) return cb(err);
+
+/*      Simcard.coordinates.create([{
+        simcardId: 1,
+        point: {"lat": 47.439578, "lng": 18.924680},
+      }], cb);
+*/    });
+  }
+
 };

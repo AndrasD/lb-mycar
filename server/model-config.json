@@ -47,5 +47,13 @@
   "CustomerRight": {
     "dataSource": "mysqlDs",
     "public": true
+  },
+  "Simcard": {
+    "dataSource": "mysqlDs",
+    "public": true
+  },
+  "Coordinate": {
+    "dataSource": "mysqlDs",
+    "public": true
   }
 }

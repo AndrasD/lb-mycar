@@ -47,8 +47,6 @@ angular
         };
 
         $state.go('login');
-      } else {
-        $state.go('dashboard');       
       }
     });
 

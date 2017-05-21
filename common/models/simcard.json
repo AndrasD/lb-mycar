@@ -1,0 +1,38 @@
+{
+  "name": "Simcard",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "customerId": {
+      "type": "string",
+      "required": true,
+      "index": true
+    },
+    "imei": {
+      "type": "string",
+      "required": true
+    },
+    "number": {
+      "type": "string",
+      "required": true,
+      "length": 15
+    }
+  },
+  "validations": [],
+  "relations": {
+    "customer": {
+      "type": "belongsTo",
+      "model": "Customer"
+    },
+    "coordinates": {
+      "type": "hasMany",
+      "model": "Coordinate",
+      "foreignKey": "simcardId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

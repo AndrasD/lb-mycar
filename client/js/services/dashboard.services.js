@@ -1,14 +1,14 @@
 angular
   .module('app')
   .factory('DashService', 
-   ['Customer', '$q', '$scope', '$rootScope', '$state', 'toaster', function(Customer, $q, $scope, $rootScope, $state, toaster) {
+   ['Customer', 'toaster', function(Customer, toaster) {
 
-    var factory = {};
-
-    factory.simcard = function() {
-        return comboNames = ["Emil", "Tobias", "Linus"];
+    function simcard() {
+        return [{name: "Emil"}, {name: "Tobias"}, {name: "Linus"}];
     };
 
-    return factory;
-
+    return {
+        simcard: simcard
+    };
+    
   }]);

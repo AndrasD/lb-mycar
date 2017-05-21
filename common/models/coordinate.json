@@ -1,0 +1,34 @@
+{
+  "name": "Coordinate",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "simcardId": {
+      "type": "string",
+      "required": true,
+      "index": true
+    },
+    "point": {
+      "type": "geopoint",
+      "required": true
+    },
+    "time": {
+      "type": "date",
+      "required": true,
+      "defaultFn": "now"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "simcard": {
+      "type": "belongsTo",
+      "model": "Simcard",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
