@@ -13,7 +13,7 @@ angular
             $rootScope.currentUser = {
               id: response.user.id,
               tokenId: response.id,
-              email: email,
+              email: response.user.email,
               username: response.user.username,
               role: resp[0].name
             }
@@ -29,8 +29,8 @@ angular
        .logout()
        .$promise
        .then(function() {
-         toaster.pop("success", "", "Logged out successfully!", 5000, 'trustedHtml');
-         $rootScope.currentUser = null;
+          toaster.pop("success", "", "Logged out successfully!", 5000, 'trustedHtml');
+          $rootScope.currentUser = null;
        });
     }
 

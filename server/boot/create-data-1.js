@@ -8,9 +8,8 @@ module.exports = function(app) {
   var Right = app.models.Right;
   var CustomerRight = app.models.CustomerRight;
   var Simcard = app.models.Simcard;
-  var Coordinate = app.model.Coordinate;
 
-  //  create all models
+  //  create models
 
   async.series([
     function(callback) {
@@ -29,13 +28,6 @@ module.exports = function(app) {
       createSimcards(function(err) {
         if (err) return callback(err);
         console.log('> simcard created sucessfully');
-        callback();
-      });
-    },
-    function(callback) {
-      createCoordinates(function(err) {
-        if (err) return callback(err);
-        console.log('> coordinate created sucessfully');
         callback();
       });
     }
@@ -111,20 +103,12 @@ module.exports = function(app) {
         customerId: 1,
         imei: 'IMEI1234567890',
         number: '+36-20-222-7326',
+      }, {
+        customerId: 2,
+        imei: 'IMEI1234567890',
+        number: '+36-30-111-7326',       
       }], cb);
     });
-  }
-
-  //  create coordinate
-  function createCoordinates(cb) {
-    mysqlDs.autoupdate('Coordinate', function(err) {
-      if (err) return cb(err);
-
-/*      Simcard.coordinates.create([{
-        simcardId: 1,
-        point: {"lat": 47.439578, "lng": 18.924680},
-      }], cb);
-*/    });
   }
 
 };

@@ -1,14 +1,16 @@
 angular
   .module('app')
   .factory('DashService', 
-   ['Customer', 'toaster', function(Customer, toaster) {
+   ['Customer', 'Simcard', '$q', 'toaster', function(Customer, Simcard, $q, toaster) {
 
-    function simcard() {
-        return [{name: "Emil"}, {name: "Tobias"}, {name: "Linus"}];
+    function allSimcard() {
+        return Simcard
+        .find()
+        .$promise
     };
 
     return {
-        simcard: simcard
+        allSimcard: allSimcard
     };
     
   }]);
