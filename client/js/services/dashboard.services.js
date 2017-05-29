@@ -6,7 +6,7 @@ angular
     function allSimcard() {
         return Simcard
         .find()
-        .$promise
+        .$promise;
     };
 
     return {

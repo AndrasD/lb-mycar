@@ -10,13 +10,7 @@ angular
         .then(function(response) {
           toaster.pop("success", "", "Logged in successfully!", 5000, 'trustedHtml');
           role(response.user.id).then(function(resp) {
-            $rootScope.currentUser = {
-              id: response.user.id,
-              tokenId: response.id,
-              email: response.user.email,
-              username: response.user.username,
-              role: resp[0].name
-            }
+            fillCurrentUser(response.id, response.user, resp);
           })
         })
         .catch(function(error) {
@@ -45,15 +39,11 @@ angular
 
     function refresh(accessTokenId) {
       return Customer
-        .getCurrent(function(userResource) {
+        .getCurrent()
+        .$promise
+        .then(function(userResource) {
           role(userResource.id).then(function(resp) {
-            $rootScope.currentUser = {
-              id: userResource.id,
-              tokenId: accessTokenId,
-              email: userResource.email,
-              username: userResource.username,
-              role: resp[0].name
-            };
+            fillCurrentUser(accessTokenId, userResource, resp);
           })
         });
     }
@@ -64,6 +54,16 @@ angular
         id: userId
        })
        .$promise;
+    }
+
+    function fillCurrentUser(token, user, role) {
+      $rootScope.currentUser = {
+        id: user.id,
+        tokenId: token,
+        email: user.email,
+        username: user.username,
+        role: role[0].name
+      };
     }
 
     return {

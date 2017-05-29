@@ -6,13 +6,13 @@ angular
     $scope.selectedName = "";
     
     if ($rootScope.currentUser.role == 'admin') {
-    DashService.allSimcard()
-    .then( function(response) {
-      var simCards = [];
-      angular.forEach(response, function(value, key) {
-          simCards.push(value);
+      DashService.allSimcard()
+      .then( function(response) {
+        var simCards = [];
+        angular.forEach(response, function(value, key) {
+            simCards.push(value);
+        });
+        $scope.simCards = simCards;        
       });
-      $scope.simCards = simCards;        
-    });
     }
 }]);

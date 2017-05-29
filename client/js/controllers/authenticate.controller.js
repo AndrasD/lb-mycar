@@ -10,8 +10,7 @@ angular
     $scope.login = function() {
       if (!$rootScope.currentUser) {    
         AuthService.login($scope.user.email, $scope.user.password)
-          .then(function() {
-
+          .then(function(response) {
             // return to saved returnTo state before redirection to login
             if ($scope.returnTo && $scope.returnTo.state) {
               $state.go(
