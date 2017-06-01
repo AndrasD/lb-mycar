@@ -6,16 +6,7 @@ angular
     function login(email, password) {
       return Customer
         .login({email: email, password: password})
-        .$promise
-        .then(function(response) {
-          toaster.pop("success", "", "Logged in successfully!", 5000, 'trustedHtml');
-          role(response.user.id).then(function(resp) {
-            fillCurrentUser(response.id, response.user, resp);
-          })
-        })
-        .catch(function(error) {
-          toaster.pop("error", "", "Login failed.", 10000, 'trustedHtml');
-        });
+        .$promise;
     }
 
     function logout() {
@@ -57,7 +48,7 @@ angular
     }
 
     function fillCurrentUser(token, user, role) {
-      $rootScope.currentUser = {
+      return $rootScope.currentUser = {
         id: user.id,
         tokenId: token,
         email: user.email,
@@ -71,7 +62,8 @@ angular
       logout: logout,
       register: register,
       refresh: refresh,
-      role: role
+      role: role,
+      fillCurrentUser: fillCurrentUser
     };
 
   }]);

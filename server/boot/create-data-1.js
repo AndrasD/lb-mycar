@@ -30,6 +30,13 @@ module.exports = function(app) {
         console.log('> simcard created sucessfully');
         callback();
       });
+    },
+    function(callback) {
+      createCoordinates(function(err) {
+        if (err) return callback(err);
+        console.log('> coordinate created sucessfully');
+        callback();
+      });
     }
   ], function(err) {
     if (err) return next(err);
@@ -106,8 +113,15 @@ module.exports = function(app) {
       }, {
         customerId: 2,
         imei: 'IMEI1234567890',
-        number: '+36-30-111-7326',       
+        number: '+36-30-600-1967',       
       }], cb);
+    });
+  }
+
+  //  create coordinate
+  function createCoordinates(cb) {
+    mysqlDs.automigrate('Coordinate', function(err) {
+      if (err) return cb(err);
     });
   }
 

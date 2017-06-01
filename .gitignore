@@ -14,6 +14,7 @@
 .idea
 .project
 .strong-pm
+.vscode/chrome
 coverage
 node_modules
 client/bower_components

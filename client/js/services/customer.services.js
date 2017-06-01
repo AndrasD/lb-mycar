@@ -1,18 +1,16 @@
 angular
   .module('app')
   .factory('CustomerService',
-   ['Customer', 'toaster', function(Customer, toaster) {
+   ['Customer', '$q', '$rootScope', 'toaster', function(Customer, $q, $rootScope, toaster) {
 
-    function getCurrentCustomer() {
-        var customer = {
-            email: $rootScope.currentUser.email,
-            name: $rootScope.currentUser.username
-        } 
-        return customer;
+    function updateCustomer(userId, userName) {
+      return Customer
+      .prototype$patchAttributes({userId}, {username: userName})
+      .$promise;
     }
 
     return {
-      getCurrentCustomer: getCurrentCustomer
+      updateCustomer: updateCustomer
     };
 
   }]);
