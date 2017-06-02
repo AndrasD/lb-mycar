@@ -28,12 +28,18 @@ angular
         templateUrl: 'views/customer.view.html',
         controller: 'customerController',
         authenticate: true
+      })
+      .state('customers', {
+        url: '/customers',
+        templateUrl: 'views/customers.view.html',
+        controller: 'customerController',
+        authenticate: true
       });
     $urlRouterProvider.otherwise('login');
   }])
   
   .run(['$rootScope', '$state', 'LoopBackAuth', 'AuthService', function($rootScope, $state, LoopBackAuth, AuthService) {
-    $rootScope.$on('$stateChangeStart', function(event, toState, toParams) {
+    $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState) {
       // redirect to login page if not logged in
       if (toState.authenticate && !LoopBackAuth.accessTokenId) {
         event.preventDefault(); //prevent current page from loading
@@ -45,8 +51,10 @@ angular
           state: toState,
           params: toParams
         };
-
-        $state.go('login');
+        $rootScope.fromPage = 'login';
+        $state.go($rootScope.fromPage);
+      } else {
+        $rootScope.fromPage = fromState.name;
       }
     });
 

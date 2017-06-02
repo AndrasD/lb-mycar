@@ -10,7 +10,7 @@
                     <label class="col-sm-5 control-label" for="email">Email</label>
                     <div class="col-sm-7">
                         <span class="block input-icon input-icon-right">
-                              <input type="text" class="form-control" placeholder="Email" name="email" ng-model="customer.email" enable=false/>
+                              <input type="text" class="form-control" placeholder="Email" name="email" ng-model="currentCustomer.email" enable=false/>
                         </span>
                     </div>
                 </div>
@@ -18,14 +18,14 @@
                     <label class="col-sm-5 control-label no-padding-right" for="name">Name</label>
                     <div class="col-sm-7">
                         <span class="block input-icon input-icon-right">
-                              <input type="text" class="form-control" placeholder="Name" name="name" ng-model="customer.name" required/>
+                              <input type="text" class="form-control" placeholder="Name" name="name" ng-model="currentCustomer.name" required/>
                         </span>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <div class="col-sm-12 controls">
-                        <button type="submit" class="btn btn-primary" ng-click="customerUpdate(customer)" data-ng-disabled="customerForm.$invalid">Change</button>
+                        <button type="submit" class="btn btn-primary" ng-click="customerUpdate(currentCustomer)" data-ng-disabled="customerForm.$invalid">Change</button>
                     </div>
                 </div>
 
