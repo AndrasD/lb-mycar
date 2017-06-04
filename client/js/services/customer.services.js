@@ -8,6 +8,10 @@ angular
       .$promise;
     }
 
+    function insertCustomer() {
+      return Customer
+    }
+
     function updateCustomer(userId, userName) {
       return Customer.prototype$patchAttributes({"id": userId}, {"username": userName})
       .$promise;
@@ -18,10 +22,16 @@ angular
       .$promise;
     }
 
+    function getCustomerRight(userId) {
+      return Customer.customerRight({"id": userId})
+      .$promise;
+    }
+
     return {
       getCustomers: getCustomers,
       updateCustomer: updateCustomer,
-      deleteCustomer: deleteCustomer
+      deleteCustomer: deleteCustomer,
+      getCustomerRight: getCustomerRight
     };
 
   }]);

@@ -17,6 +17,7 @@ angular
     CustomerService.getCustomers()
     .then( function(response) {
       angular.forEach(response, function(value, key) {
+        value.description = "";
         $scope.customersCollection.push(value);
       });
     });
@@ -40,6 +41,21 @@ angular
         customer.editMode = true;
         $scope.disableButton = true;
         $scope.sort = undefined;
+    }
+
+    //save customer (create & update)
+    $scope.saveCustomer = function(customer) {
+        if (customer.editMode) {
+            customer.editMode = false;
+            $scope.disableButton = false;     
+            CustomerService.updateCustomer(customer.id, customer.username)
+            .then( function(response) {
+              toaster.pop("success", "", "Customer updated successfully", 10000, 'trustedHtml');
+            });
+        } else {
+            customer.editMode = false;
+            $scope.disableButton = false;
+        }
     }
 
     $scope.cancel = function(customer) {

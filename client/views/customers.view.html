@@ -30,21 +30,9 @@
                                 </a>
                             </th>
                             <th class="col-sm-2" >
-                                <a ng-click="sortType = 'city'; sortReverse = !sortReverse">City
+                                <a ng-click="sortType = 'city'; sortReverse = !sortReverse">Authorization
                                 <span ng-show="sortType == 'city' && !sortReverse" class="pull-right fa fa-sort-amount-asc"></span>
                                 <span ng-show="sortType == 'city' && sortReverse" class="pull-right fa fa-sort-amount-desc"></span>
-                                </a>                                
-                            </th>
-                            <th class="col-sm-2" > 
-                                <a ng-click="sortType = 'address'; sortReverse = !sortReverse">Address
-                                <span ng-show="sortType == 'address' && !sortReverse" class="pull-right fa fa-sort-amount-asc"></span>
-                                <span ng-show="sortType == 'address' && sortReverse" class="pull-right fa fa-sort-amount-desc"></span>
-                                </a>                                
-                            </th>
-                            <th class="col-sm-2" >
-                                <a ng-click="sortType = 'phone'; sortReverse = !sortReverse">Phone
-                                <span ng-show="sortType == 'phone' && !sortReverse" class="pull-right fa fa-sort-amount-asc"></span>
-                                <span ng-show="sortType == 'phone' && sortReverse" class="pull-right fa fa-sort-amount-desc"></span>
                                 </a>                                
                             </th>
                         </tr>
@@ -65,19 +53,11 @@
                             </td>
                             <td>
                                 <span ng-hide="customer.editMode">{{customer.email}}</span>
-                                <input ng-show="customer.editMode" type="text" class="form-control input-sm" name="email" ng-model="customer.email" required/>
+                                <input ng-show="customer.editMode" type="text" class="form-control input-sm" name="email" ng-model="customer.email" disabled/>
                             </td>
                             <td>
-                                <span ng-hide="customer.editMode">{{customer.city}}</span>
+                                <span ng-hide="customer.editMode">{{customer.description}}</span>
                                 <input ng-show="customer.editMode" type="text" class="form-control input-sm" name="city" ng-model="customer.city" />
-                            </td>
-                            <td>
-                                <span ng-hide="customer.editMode">{{customer.address}}</span>
-                                <input ng-show="customer.editMode" type="text" class="form-control input-sm" name="address" ng-model="customer.address" />
-                            </td>
-                            <td>
-                                <span ng-hide="customer.editMode">{{customer.phone}}</span>
-                                <input ng-show="customer.editMode" type="text" class="form-control input-sm" name="phone" ng-model="customer.phone" />
                             </td>
                         </tr>
                     </tbody>
@@ -150,22 +130,6 @@
                         <div class="col-sm-8">
                             <span class="block input-icon input-icon-right">
                                 <input type="text" class="form-control" placeholder="Name" ng-model="customer.username" />
-                            </span>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-sm-4 control-label no-padding-right" for="phone">Phone</label>
-                        <div class="col-sm-8">
-                            <span class="block input-icon input-icon-right">
-                                <input type="text" class="form-control" placeholder="Phone" name="phone" ng-model="customer.phone"/>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-sm-4 control-label no-padding-right" for="address">Address</label>
-                        <div class="col-sm-8">
-                            <span class="block input-icon input-icon-right">
-                                <input type="text" class="form-control" placeholder="Address" ng-model="customer.address" />
                             </span>
                         </div>
                     </div>
