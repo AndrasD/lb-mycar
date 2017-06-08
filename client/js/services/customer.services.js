@@ -1,15 +1,38 @@
 angular
   .module('app')
   .factory('CustomerService',
-   ['Customer', '$q', '$rootScope', 'toaster', function(Customer, $q, $rootScope, toaster) {
+   ['Customer', 'Right', 'CustomerRight', '$q', '$rootScope', 'toaster', function(Customer, Right, CustomerRight, $q, $rootScope, toaster) {
 
     function getCustomers() {
       return Customer.find()
       .$promise;
     }
 
-    function insertCustomer() {
-      return Customer
+    function getRights() {
+      return Right.find()
+      .$promise;
+    }
+
+    function insertCustomer(customer) {
+      return Customer.create([
+        {
+          email: customer.email,
+          password: customer.password,
+          username: customer.username,
+        }
+      ])
+      .$promise;
+    }
+
+    function insertCustomerRight(customerId, rightId) {
+      return CustomerRight.create([
+        {
+          principalType: CustomerRight.USER,
+          principalId: customerId,
+          roleId: rightId,
+        }
+      ])
+      .$promise;
     }
 
     function updateCustomer(userId, userName) {
@@ -29,6 +52,9 @@ angular
 
     return {
       getCustomers: getCustomers,
+      getRights: getRights,
+      insertCustomer: insertCustomer,
+      insertCustomerRight: insertCustomerRight,
       updateCustomer: updateCustomer,
       deleteCustomer: deleteCustomer,
       getCustomerRight: getCustomerRight
